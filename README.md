@@ -2,6 +2,7 @@
 GMD1 Semester Project
 
 Blog 1 
+
 The day is 18/02/2024. I have finished the Roll-a-Ball tutorial, and have implemented a few extra features. However, most of them were learning about the usage of Free Assets, and making basic scripts like randomly generating trees and other nature structures, adding a skybox of sorts, and making a dynamic camera. 
 Overall, this is my 2nd time playing around with Unity, as the first one was 1 year ago when I bought a course in Udemy, though I ended up not finishing it due to not finding time at the time. As such, it didn't feel so weird seeing how things worked, since I had already some kind of experience with the very basics.
 Now taking all this information into context, and also remembering the fact that the final game project is to be made for an arcade, I have come up with 2 game ideas:
