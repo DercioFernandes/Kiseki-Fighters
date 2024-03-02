@@ -1,4 +1,4 @@
-# Ikigai-no-Kiseki
+# Kiseki Fighters
 GMD1 Semester Project
 
 Blog 1 
