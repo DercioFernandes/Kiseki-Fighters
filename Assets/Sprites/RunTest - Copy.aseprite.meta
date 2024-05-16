@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02412171fb40f554fba1ef295562a77f
+guid: 723ccbf3d892acf45959b945ef712302
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: RunTest_Frame_0
+  - name: RunTest - Copy_Frame_0
     originalName: 
     pivot: {x: 0.5, y: -0.07272727}
     alignment: 9
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 67
       width: 18
       height: 55
-    spriteID: a9711a6e833d264488c99ee967e201a7
+    spriteID: 2ddccfea923e4fd46885a8f0d4219643
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,7 +141,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 35, y: 67}
-  - name: RunTest_Frame_1
+  - name: RunTest - Copy_Frame_1
     originalName: 
     pivot: {x: 0.5, y: -0.07272727}
     alignment: 9
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 4
       width: 18
       height: 55
-    spriteID: 937d98ae91d2eb4498085ed40dca7492
+    spriteID: a8bf6ad290fd70d48b6bcf696302c07d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,7 +161,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 64, y: 4}
-  - name: RunTest_Frame_2
+  - name: RunTest - Copy_Frame_2
     originalName: 
     pivot: {x: 0.47619048, y: -0.07272727}
     alignment: 9
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 4
       width: 21
       height: 55
-    spriteID: 023efb3a053aa924791bca01cd2ffd28
+    spriteID: 5d7ce3878cdeb6a45a2680dbdfc7783d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,7 +181,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 35, y: 4}
-  - name: RunTest_Frame_3
+  - name: RunTest - Copy_Frame_3
     originalName: 
     pivot: {x: 0.5217391, y: 0}
     alignment: 9
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 4
       width: 23
       height: 59
-    spriteID: 20da8c19e14b69a4baeacae03c6bab8e
+    spriteID: 27b0670818cdf4244a0d9b8ae79907b1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -204,44 +204,44 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1908948607
-    name: RunTest
+    guid: 1159223519
+    name: RunTest - Copy
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: RunTest_Frame_0
+    - name: RunTest - Copy_Frame_0
       frameIndex: 0
       cellRect:
         x: 23
         y: 4
         width: 18
         height: 55
-      spriteId: a9711a6e833d264488c99ee967e201a7
-    - name: RunTest_Frame_1
+      spriteId: 2ddccfea923e4fd46885a8f0d4219643
+    - name: RunTest - Copy_Frame_1
       frameIndex: 1
       cellRect:
         x: 23
         y: 4
         width: 18
         height: 55
-      spriteId: 937d98ae91d2eb4498085ed40dca7492
-    - name: RunTest_Frame_2
+      spriteId: a8bf6ad290fd70d48b6bcf696302c07d
+    - name: RunTest - Copy_Frame_2
       frameIndex: 2
       cellRect:
         x: 22
         y: 4
         width: 21
         height: 55
-      spriteId: 023efb3a053aa924791bca01cd2ffd28
-    - name: RunTest_Frame_3
+      spriteId: 5d7ce3878cdeb6a45a2680dbdfc7783d
+    - name: RunTest - Copy_Frame_3
       frameIndex: 3
       cellRect:
         x: 20
         y: 0
         width: 23
         height: 59
-      spriteId: 20da8c19e14b69a4baeacae03c6bab8e
+      spriteId: 27b0670818cdf4244a0d9b8ae79907b1
     linkedCells: []
     parentIndex: -1
   platformSettings: []

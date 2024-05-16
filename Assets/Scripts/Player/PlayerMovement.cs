@@ -10,27 +10,34 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
 
+    public StaminaBar stamBar;
+    public int maxStam = 20;
+    public int currentStam;
+
     public bool isRunning;
     private float horizontal;
     private bool isFacingRight = true;
     private bool isDashing;
     private float dashTime;
     private float dashCooldownTime;
-    public float moveSpeed = 5f;
-    public float jumpForce = 10f;
-    public float dashSpeed = 40f;
-    public float dashDuration = 0.2f;
-    public float dashCooldown = 1f;
+    public float moveSpeed = 500f;
+    public float jumpForce = 500f;
+    public float dashSpeed = 200f;
+    public float dashDistance = 200f;
     
     private void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        
+        currentStam = maxStam;
+        stamBar.SetMaxStamina(maxStam);
     }
 
     void Start()
     {
         isRunning = false;
+        
     }
 
     void Update()
@@ -48,49 +55,42 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         isRunning = false;
-        if(context.performed && isGrounder())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        }
+        if(currentStam > 0){
+            if(context.performed && isGrounder())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            }
 
-        if(context.canceled && rb.velocity.y > 0f){
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            if(context.canceled && rb.velocity.y > 0f){
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
+            LoseStam(1);
         }
     }
 
     public void Dash(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if (context.performed)
         {
-            
-            print("DASHED");
-            StartDash();
+            if(currentStam > 0){
+                Vector3 targetPosition;
+                print("DASHED");
+                // Check the player's facing direction
+                    if (transform.localScale.x > 0)
+                    {
+                        // Player is facing right
+                        targetPosition = transform.position + transform.right * dashDistance;
+                    }
+                    else
+                    {
+                        // Player is facing left
+                        targetPosition = transform.position - transform.right * dashDistance;
+                    }
+                print(targetPosition);
+                transform.position = targetPosition;
+                LoseStam(1);
+            }
         }
-
-        if(context.canceled){
-            EndDash();
-        }
-    }
-
-    private void StartDash()
-    {
-        print("DASHED");
-        isDashing = true;
-        dashTime = Time.time + dashDuration;
-        dashCooldownTime = Time.time + dashCooldown;
-        rb.velocity = new Vector2(horizontal * dashSpeed, rb.velocity.y);
-
-        // Optionally, set an animation parameter for dashing
-        //animator.SetBool("isDashing", true);
-    }
-
-    private void EndDash()
-    {
-        isDashing = false;
-        rb.velocity = new Vector2(0, rb.velocity.y);
-
-        // Optionally, reset the animation parameter for dashing
-        //animator.SetBool("isDashing", false);
     }
 
     private bool isGrounder(){
@@ -107,5 +107,11 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
+    }
+
+    void LoseStam(int staminaToLose)
+    {
+        currentStam -= staminaToLose;
+        stamBar.SetStamina(currentStam);
     }
 }
