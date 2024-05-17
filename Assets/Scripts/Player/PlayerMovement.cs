@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         }
         isRunning = rb.velocity.x != 0;
         animator.SetBool("running", isRunning);
+        currentStam = (int) stamBar.GetStamina();
     }
 
     public void Jump(InputAction.CallbackContext context)
