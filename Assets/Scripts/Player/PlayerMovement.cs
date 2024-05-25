@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public float dashSpeed = 200f;
     public float dashDistance = 200f;
     
+    private float initialRotationY;
+    
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -37,16 +39,35 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         isRunning = false;
-        
+        initialRotationY = transform.rotation.eulerAngles.y;
     }
 
     void Update()
     {
         rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
-        if(!isFacingRight && horizontal > 0f){
-            Flip();
-        }else if (isFacingRight && horizontal < 0f){
-            Flip();
+        if (initialRotationY == 180f)
+        {
+            // Adjust flip logic for initial rotation of 180 degrees
+            if (isFacingRight && horizontal > 0f)
+            {
+                Flip();
+            }
+            else if (!isFacingRight && horizontal < 0f)
+            {
+                Flip();
+            }
+        }
+        else
+        {
+            // Original flip logic for normal orientation
+            if (!isFacingRight && horizontal > 0f)
+            {
+                Flip();
+            }
+            else if (isFacingRight && horizontal < 0f)
+            {
+                Flip();
+            }
         }
         isRunning = rb.velocity.x != 0;
         animator.SetBool("running", isRunning);
