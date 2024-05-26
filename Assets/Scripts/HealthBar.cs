@@ -17,4 +17,14 @@ public class HealthBar : MonoBehaviour
         slider.maxValue = health;
         slider.value = health;
     }
+
+    public float GetHeatlh()
+    {
+        return slider.value;
+    }
+
+    public void TakeDamage(int healthRemoved)
+    {
+        slider.value -= healthRemoved;
+    }
 }

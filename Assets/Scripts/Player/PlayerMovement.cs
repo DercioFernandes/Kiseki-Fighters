@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public int currentStam;
 
     public bool isRunning;
+    public bool isJumping;
     private float horizontal;
     private bool isFacingRight = true;
     private bool isDashing;
@@ -39,12 +40,17 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         isRunning = false;
+        isJumping = false;
         initialRotationY = transform.rotation.eulerAngles.y;
     }
 
     void Update()
     {
         rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
+        isRunning = rb.velocity.x != 0;
+        animator.SetBool("running", isRunning);
+        isJumping = rb.velocity.y != 0;
+        animator.SetBool("isJumping", isJumping);
         if (initialRotationY == 180f)
         {
             // Adjust flip logic for initial rotation of 180 degrees
@@ -69,8 +75,6 @@ public class PlayerMovement : MonoBehaviour
                 Flip();
             }
         }
-        isRunning = rb.velocity.x != 0;
-        animator.SetBool("running", isRunning);
         currentStam = (int) stamBar.GetStamina();
     }
 

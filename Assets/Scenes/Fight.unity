@@ -310,6 +310,114 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb2b59388f87f34799aa5c01bdb1ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &934245213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 934245214}
+  - component: {fileID: 934245215}
+  m_Layer: 0
+  m_Name: SecondCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &934245214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934245213}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0059648, y: 0.349, z: 0}
+  m_LocalScale: {x: 1.890625, y: 0.65, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1390922463}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &934245215
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934245213}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.006697368, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16685143, y: 1}
+  m_EdgeRadius: 0
+--- !u!1 &1390922455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2040953953073650236, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+  m_PrefabInstance: {fileID: 6512366413306774199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1390922463 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5857445980372202737, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+  m_PrefabInstance: {fileID: 6512366413306774199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1390922464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390922455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cdfc09713396b046a39b2bad31a1704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stamBar: {fileID: 1447653448}
+  currentStam: 0
+  enemyHealthBar: {fileID: 887357010}
+  currentHealth: 0
+  isPunching: 0
+  isKicking: 0
+  otherPlayerTag: Player2
+  punchCooldown: 1
+  isTouchingPlayer: 0
 --- !u!114 &1418859159 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1401821753678043697, guid: 3f9378bbfc620c64780a0aaed63d117b, type: 3}
@@ -473,6 +581,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 004e2ca2744bfec4296aafd98086f6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1817621360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1817621361}
+  - component: {fileID: 1817621362}
+  m_Layer: 0
+  m_Name: SecondCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1817621361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817621360}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.338, z: 0}
+  m_LocalScale: {x: 0.28502, y: 0.70777476, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2052359408}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1817621362
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817621360}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &1928634044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -616,7 +801,7 @@ GameObject:
   - component: {fileID: 2052359401}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -770,6 +955,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2d7cb676-b635-4532-a66d-a11d1dcfa99f
     m_ActionName: ARROW/Dash[/Keyboard/downArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8b18cdec-c8b3-498e-b50f-3614e40b5979
+    m_ActionName: WASD/Punch[/Keyboard/g]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 12016769-b448-4341-9916-8b3248b29082
+    m_ActionName: ARROW/Punch[/Keyboard/m]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ARROW
@@ -795,6 +988,7 @@ MonoBehaviour:
   maxStam: 20
   currentStam: 0
   isRunning: 0
+  isJumping: 0
   moveSpeed: 500
   jumpForce: 800
   dashSpeed: 200
@@ -958,6 +1152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2111915674}
+  - {fileID: 1817621361}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &2111915673
@@ -999,6 +1194,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1374611591532320649, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1743173203186691073, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
       propertyPath: healthBar
       value: 
@@ -1063,10 +1262,108 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionId
+      value: 8b18cdec-c8b3-498e-b50f-3614e40b5979
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
+      value: 12016769-b448-4341-9916-8b3248b29082
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_ActionId
+      value: 1d6d3e40-0a0f-454c-84b7-2158a5b2ca9c
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionId
+      value: f49bea54-8461-488d-9635-be68cecf0de6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_ActionName
+      value: WASD/Punch[/Keyboard/g]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
+      value: ARROW/Punch[/Keyboard/m]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_ActionName
+      value: WASD/Kick[/Keyboard/h]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionName
+      value: ARROW/Kick[/Keyboard/n]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1390922464}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1390922464}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Punch
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Kick
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerHumanSet, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerHumanSet, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960495231175064661, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5857445980372202737, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 934245214}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2040953953073650236, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1390922464}
   m_SourcePrefab: {fileID: 100100000, guid: 675d679c4de8feb499b86aafbe5bce0c, type: 3}
 --- !u!1001 &9114971863244096205
 PrefabInstance:
