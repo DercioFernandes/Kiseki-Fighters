@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8d4ce822a4e034c88e88109ffcfe47, type: 3}
+  m_Name: New Character Database
+  m_EditorClassIdentifier: 
+  character:
+  - characterName: Fly
+    characterSprite: {fileID: -9213263429266876001, guid: 723ccbf3d892acf45959b945ef712302, type: 3}
+    characterPrefab: {fileID: 3502158981597555447, guid: d021e0768bb66cb499d98d2fcf637e19, type: 3}
+  - characterName: Frieren
+    characterSprite: {fileID: -8918514819228227902, guid: ea1ddd52559b8894ca020893db8dcac7, type: 3}
+    characterPrefab: {fileID: 3502158981597555447, guid: 30e2c444d5465df4b911570d4a9166b1, type: 3}
+  - characterName: Oka
+    characterSprite: {fileID: 21300000, guid: 34102d1a6a4b27147842dbaa93d6ed32, type: 3}
+    characterPrefab: {fileID: 3502158981597555447, guid: f287c8f698897064283cc9d1fa5ef338, type: 3}

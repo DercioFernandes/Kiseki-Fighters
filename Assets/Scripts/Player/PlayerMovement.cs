@@ -10,9 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
 
-    public StaminaBar stamBar;
-    public int maxStam = 20;
-    public int currentStam;
+    public PlayerController staminaBar;
 
     public bool isRunning;
     public bool isJumping;
@@ -27,14 +25,12 @@ public class PlayerMovement : MonoBehaviour
     public float dashDistance = 200f;
     
     private float initialRotationY;
+    public PlayerController playerController;
     
     private void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        
-        currentStam = maxStam;
-        stamBar.SetMaxStamina(maxStam);
     }
 
     void Start()
@@ -42,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         isRunning = false;
         isJumping = false;
         initialRotationY = transform.rotation.eulerAngles.y;
+        staminaBar = playerController;
     }
 
     void Update()
@@ -75,13 +72,13 @@ public class PlayerMovement : MonoBehaviour
                 Flip();
             }
         }
-        currentStam = (int) stamBar.GetStamina();
+
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
         isRunning = false;
-        if(currentStam > 0){
+        if(staminaBar.GetStam() > 0){
             if(context.performed && isGrounder())
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -90,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
             if(context.canceled && rb.velocity.y > 0f){
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             }
-            LoseStam(1);
+            staminaBar.LoseStam(1);
         }
     }
 
@@ -98,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
-            if(currentStam > 0){
+            if(staminaBar.GetStam() > 0){
                 Vector3 targetPosition;
                 print("DASHED");
                 // Check the player's facing direction
@@ -114,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                 print(targetPosition);
                 transform.position = targetPosition;
-                LoseStam(1);
+                staminaBar.LoseStam(1);
             }
         }
     }
@@ -133,11 +130,5 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
-    }
-
-    void LoseStam(int staminaToLose)
-    {
-        currentStam -= staminaToLose;
-        stamBar.SetStamina(currentStam);
     }
 }

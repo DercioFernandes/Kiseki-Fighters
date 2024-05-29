@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerHumanSet : MonoBehaviour
+public class PlayerElfSet : MonoBehaviour
 {
     private Animator animator;
     private Rigidbody2D rb;
@@ -15,7 +15,6 @@ public class PlayerHumanSet : MonoBehaviour
     public float punchCooldown = 1.0f;
     private float punchCooldownTimer = 0f;
     public bool isTouchingPlayer;
-    
 
     private void Awake()
     {
@@ -81,6 +80,7 @@ public class PlayerHumanSet : MonoBehaviour
         if (collision.gameObject.CompareTag(otherPlayerTag))
         {
             isTouchingPlayer = true;
+            print("hit player");
         }
     }
 
