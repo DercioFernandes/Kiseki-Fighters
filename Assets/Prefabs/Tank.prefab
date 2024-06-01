@@ -203,10 +203,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 150
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 110
+  m_AngularDrag: 0
+  m_GravityScale: 150
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -282,8 +282,8 @@ MonoBehaviour:
   staminaBar: {fileID: 0}
   isRunning: 0
   isJumping: 0
-  moveSpeed: 500
-  jumpForce: 800
+  moveSpeed: 600
+  jumpForce: 1000
   dashSpeed: 200
   dashDistance: 200
   playerController: {fileID: 0}

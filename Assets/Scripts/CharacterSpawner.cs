@@ -64,15 +64,15 @@ public class CharacterSpawner : MonoBehaviour
     	
         playerHumanSet1.playerController = playerController1;
         playerHumanSet2.playerController = playerController2;
-        playerHumanSet1.enemyHealthBar = playerController2.healthBar;
-        playerHumanSet2.enemyHealthBar = playerController1.healthBar;
+        playerHumanSet1.enemyHealthBar = playerController2;
+        playerHumanSet2.enemyHealthBar = playerController1;
         playerHumanSet1.sword = sword;
         playerHumanSet2.sword = sword;
 
         playerElfSet1.playerController = playerController1;
         playerElfSet2.playerController = playerController2;
-        playerElfSet1.enemyHealthBar = playerController2.healthBar;
-        playerElfSet2.enemyHealthBar = playerController1.healthBar;
+        playerElfSet1.enemyHealthBar = playerController2;
+        playerElfSet2.enemyHealthBar = playerController1;
         playerElfSet1.magicAttack = magicAttack;
         playerElfSet2.magicAttack = magicAttack;
     }

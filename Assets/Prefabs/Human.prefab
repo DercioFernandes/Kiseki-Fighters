@@ -204,10 +204,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 110
+  m_AngularDrag: 0
+  m_GravityScale: 150
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -283,7 +283,7 @@ MonoBehaviour:
   staminaBar: {fileID: 0}
   isRunning: 0
   isJumping: 0
-  moveSpeed: 500
+  moveSpeed: 900
   jumpForce: 800
   dashSpeed: 200
   dashDistance: 200
@@ -551,6 +551,7 @@ MonoBehaviour:
   isTouchingPlayer: 0
   magicAttack: {fileID: 0}
   mA: {fileID: 0}
+  isSecondPlayer: 0
 --- !u!1 &6911750491631383055
 GameObject:
   m_ObjectHideFlags: 0

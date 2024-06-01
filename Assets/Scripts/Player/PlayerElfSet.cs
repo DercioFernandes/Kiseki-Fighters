@@ -8,7 +8,7 @@ public class PlayerElfSet : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     public PlayerController playerController;
-    public HealthBar enemyHealthBar;
+    public PlayerController enemyHealthBar;
     public bool isPunching;
     public bool isKicking;
     public string otherPlayerTag = "Player2";
@@ -102,6 +102,7 @@ public class PlayerElfSet : MonoBehaviour
     {
         if (context.started && punchCooldownTimer <= 0 && isPunching == false && playerController.GetStam()  >= 4)
         {
+            print("kicking");
             playerController.LoseStam(4);
             isKicking = true;
             if(isTouchingPlayer == true)

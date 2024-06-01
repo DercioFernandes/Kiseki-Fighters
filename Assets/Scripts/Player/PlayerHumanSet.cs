@@ -8,7 +8,7 @@ public class PlayerHumanSet : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     public PlayerController playerController;
-    public HealthBar enemyHealthBar;
+    public PlayerController enemyHealthBar;
     public bool isPunching;
     public bool isKicking;
     public string otherPlayerTag = "Player2";

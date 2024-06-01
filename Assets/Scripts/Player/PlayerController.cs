@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         StartCoroutine(RunContinuously(3));
         currentHealth = maxHealth;
+        healthBar.SetHealth(currentHealth);
         //print("current stamina bar is: " + staminaBar.name);
     }
 
@@ -26,13 +27,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         currentStam = (int) staminaBar.GetStamina();
+        healthBar.SetHealth(currentHealth);
+        if(currentHealth <= 0){
+            print("Game Over)");
+        }
         //print("updated stamina bar is: " + staminaBar.name);
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        //print("current health is:" + currentHealth);
+        print("current health is:" + currentHealth);
         healthBar.SetHealth(currentHealth);
         //print("current health bar is: " + healthBar.name);
     }

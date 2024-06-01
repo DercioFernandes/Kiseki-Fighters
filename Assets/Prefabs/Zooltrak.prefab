@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47083dc6526ed04b8dbf21a23864917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 2
+  damageAmount: 10
   otherPlayerTag: Player2
   direction: 1
   dir: {x: 0, y: 0}
