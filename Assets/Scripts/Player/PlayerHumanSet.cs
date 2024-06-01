@@ -15,6 +15,10 @@ public class PlayerHumanSet : MonoBehaviour
     public float punchCooldown = 1.0f;
     private float punchCooldownTimer = 0f;
     public bool isTouchingPlayer;
+    public GameObject sword;
+    public bool isFacingRight;
+    private string lastCollidedTag;
+    public bool isSecondPlayer;
     
 
     private void Awake()
@@ -28,6 +32,20 @@ public class PlayerHumanSet : MonoBehaviour
         isPunching = false;
         isKicking = false;
         isTouchingPlayer = false;
+        
+        Vector2 direction = transform.right * Mathf.Sign(transform.localScale.x);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + Vector3.up * 100f, direction*5000f);
+        Debug.DrawRay(transform.position + Vector3.up * 100f, direction * 5000f, Color.red);
+        if (hit.collider != null)
+        {
+            lastCollidedTag = hit.collider.gameObject.tag;
+            Debug.Log("Last collided object tag: " + lastCollidedTag);
+            if (lastCollidedTag == "Left") {
+                isSecondPlayer = true;
+            }else{
+                isSecondPlayer = false;
+            }
+        }
     }
 
     void Update()
@@ -46,10 +64,30 @@ public class PlayerHumanSet : MonoBehaviour
         {
             playerController.LoseStam(2);
             isPunching = true;
-            if(isTouchingPlayer == true)
-                {
-                    enemyHealthBar.TakeDamage(10);
+            float yVal = 0f;
+            if(isSecondPlayer == true){
+                if(transform.localScale.x > 0){
+                    isFacingRight = false;
+                    yVal = -200f;
+                }else{
+                    isFacingRight = true;
+                    yVal = 200f;
                 }
+            }else{
+                if(transform.localScale.x > 0){
+                    isFacingRight = true;
+                    yVal = 200f;
+                }else{
+                    isFacingRight = false;
+                    yVal = -200f;
+                }
+            }
+            punchCooldownTimer = punchCooldown;
+            playerController.LoseStam(4);
+            Vector3 currentPosition = transform.position;
+            print(yVal);
+            Vector3 spawnPosition = currentPosition + new Vector3(yVal, 100f, 0);
+            Instantiate(sword, spawnPosition, Quaternion.identity);
             punchCooldownTimer = punchCooldown;
         }
         if (context.canceled)

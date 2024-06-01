@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8445911689724671889}
   - component: {fileID: 1705642960567676184}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SecondCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5174515628309387736}
   - component: {fileID: 8722711753140194700}
   - component: {fileID: 3840813025567232143}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Elf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,6 +287,7 @@ MonoBehaviour:
   jumpForce: 800
   dashSpeed: 200
   dashDistance: 200
+  playerController: {fileID: 0}
 --- !u!114 &6300284565339651383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,13 +508,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cdfc09713396b046a39b2bad31a1704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staminaBar: {fileID: 0}
+  playerController: {fileID: 0}
   enemyHealthBar: {fileID: 0}
   isPunching: 0
   isKicking: 0
   otherPlayerTag: Player2
   punchCooldown: 1
   isTouchingPlayer: 0
+  sword: {fileID: 0}
+  isFacingRight: 0
+  isSecondPlayer: 0
 --- !u!114 &3840813025567232143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,13 +530,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc333d4e9f40884698d8b12a4b18385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staminaBar: {fileID: 0}
+  playerController: {fileID: 0}
   enemyHealthBar: {fileID: 0}
   isPunching: 0
   isKicking: 0
   otherPlayerTag: Player2
   punchCooldown: 1
   isTouchingPlayer: 0
+  magicAttack: {fileID: 9214154449930340453, guid: b4a050b8a983adc4aab5caa866b11d2a, type: 3}
+  mA: {fileID: 0}
 --- !u!1 &6911750491631383055
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3327944751695721466}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

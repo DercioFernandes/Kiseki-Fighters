@@ -21,6 +21,9 @@ public class CharacterSpawner : MonoBehaviour
     public int maxStam = 20;
     public float spawnOffset = 50f;
     public Vector3 healthBarRotation = new Vector3(0f, 0f, 180f);
+    public GameObject magicAttack;
+    public GameObject sword;
+
 
     void Start()
     {
@@ -63,11 +66,15 @@ public class CharacterSpawner : MonoBehaviour
         playerHumanSet2.playerController = playerController2;
         playerHumanSet1.enemyHealthBar = playerController2.healthBar;
         playerHumanSet2.enemyHealthBar = playerController1.healthBar;
+        playerHumanSet1.sword = sword;
+        playerHumanSet2.sword = sword;
 
         playerElfSet1.playerController = playerController1;
         playerElfSet2.playerController = playerController2;
         playerElfSet1.enemyHealthBar = playerController2.healthBar;
         playerElfSet2.enemyHealthBar = playerController1.healthBar;
+        playerElfSet1.magicAttack = magicAttack;
+        playerElfSet2.magicAttack = magicAttack;
     }
 
     // Update is called once per frame

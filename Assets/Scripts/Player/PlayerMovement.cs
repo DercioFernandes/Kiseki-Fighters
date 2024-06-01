@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if(staminaBar.GetStam() > 0){
                 Vector3 targetPosition;
-                print("DASHED");
+                //print("DASHED");
                 // Check the player's facing direction
                     if (transform.localScale.x > 0)
                     {
@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
                         // Player is facing left
                         targetPosition = transform.position - transform.right * dashDistance;
                     }
-                print(targetPosition);
+                //print(targetPosition);
                 transform.position = targetPosition;
                 staminaBar.LoseStam(1);
             }

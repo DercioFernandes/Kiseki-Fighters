@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerElfSet : MonoBehaviour
+public class PlayerTankSet : MonoBehaviour
 {
     private Animator animator;
     private Rigidbody2D rb;
@@ -15,11 +15,7 @@ public class PlayerElfSet : MonoBehaviour
     public float punchCooldown = 1.0f;
     private float punchCooldownTimer = 0f;
     public bool isTouchingPlayer;
-    public GameObject magicAttack;
-    private string lastCollidedTag;
-    private bool isFacingRight = true;
-    public MagicAttack mA;
-    public bool isSecondPlayer;
+    
 
     private void Awake()
     {
@@ -32,64 +28,28 @@ public class PlayerElfSet : MonoBehaviour
         isPunching = false;
         isKicking = false;
         isTouchingPlayer = false;
-        
-        mA = magicAttack.GetComponent<MagicAttack>();
-        
-        Vector2 direction = transform.right * Mathf.Sign(transform.localScale.x);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + Vector3.up * 100f, direction*5000f);
-        Debug.DrawRay(transform.position + Vector3.up * 100f, direction * 5000f, Color.red);
-        if (hit.collider != null)
-        {
-            lastCollidedTag = hit.collider.gameObject.tag;
-            Debug.Log("Last collided object tag: " + lastCollidedTag);
-            if (lastCollidedTag == "Left") {
-                isSecondPlayer = true;
-            }else{
-                isSecondPlayer = false;
-            }
-        }
     }
 
     void Update()
     {
-        print(isFacingRight);
         animator.SetBool("isPunching", isPunching);
         animator.SetBool("isKicking", isKicking);
         if (punchCooldownTimer > 0)
         {
             punchCooldownTimer -= Time.deltaTime;
         }
-        
     }
 
     public void Punch(InputAction.CallbackContext context)
     {
-        if (context.started && punchCooldownTimer <= 0 && isKicking == false && playerController.GetStam() >= 4)
+        if (context.started && punchCooldownTimer <= 0 && isKicking == false && playerController.GetStam() >= 2)
         {
-            playerController.LoseStam(4);
-            //isPunching = true;
-            Vector3 currentPosition = transform.position;
-            float yVal = 0f;
-            if(isSecondPlayer == true){
-                if(transform.localScale.x > 0){
-                    isFacingRight = false;
-                    yVal = -200f;
-                }else{
-                    isFacingRight = true;
-                    yVal = 200f;
+            playerController.LoseStam(2);
+            isPunching = true;
+            if(isTouchingPlayer == true)
+                {
+                    enemyHealthBar.TakeDamage(10);
                 }
-            }else{
-                if(transform.localScale.x > 0){
-                    isFacingRight = true;
-                    yVal = 200f;
-                }else{
-                    isFacingRight = false;
-                    yVal = -200f;
-                }
-            }
-            Vector3 spawnPosition = currentPosition + new Vector3(yVal, 100f, 0);
-            mA.direction = isFacingRight;
-            Instantiate(magicAttack, spawnPosition, Quaternion.identity);
             punchCooldownTimer = punchCooldown;
         }
         if (context.canceled)
@@ -121,7 +81,6 @@ public class PlayerElfSet : MonoBehaviour
         if (collision.gameObject.CompareTag(otherPlayerTag))
         {
             isTouchingPlayer = true;
-            print("hit player");
         }
     }
 

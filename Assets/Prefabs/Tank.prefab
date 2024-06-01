@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8445911689724671889}
   - component: {fileID: 1705642960567676184}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SecondCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6300284565339651383}
   - component: {fileID: 5174515628309387736}
   - component: {fileID: 8722711753140194700}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,15 +279,14 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  stamBar: {fileID: 0}
-  maxStam: 20
-  currentStam: 0
+  staminaBar: {fileID: 0}
   isRunning: 0
   isJumping: 0
   moveSpeed: 500
   jumpForce: 800
   dashSpeed: 200
   dashDistance: 200
+  playerController: {fileID: 0}
 --- !u!114 &6300284565339651383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,7 +442,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  maxStamina: 20
   currentHealth: 0
+  currentStam: 0
   healthBar: {fileID: 0}
   staminaBar: {fileID: 0}
 --- !u!114 &8722711753140194700
@@ -458,15 +459,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cdfc09713396b046a39b2bad31a1704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stamBar: {fileID: 0}
-  currentStam: 0
+  playerController: {fileID: 0}
   enemyHealthBar: {fileID: 0}
-  currentHealth: 0
   isPunching: 0
   isKicking: 0
   otherPlayerTag: Player2
   punchCooldown: 1
   isTouchingPlayer: 0
+  sword: {fileID: 0}
+  isFacingRight: 0
+  isSecondPlayer: 0
 --- !u!1 &6911750491631383055
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3327944751695721466}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

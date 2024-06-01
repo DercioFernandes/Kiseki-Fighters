@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         StartCoroutine(RunContinuously(3));
+        currentHealth = maxHealth;
         //print("current stamina bar is: " + staminaBar.name);
     }
 
@@ -25,23 +26,23 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         currentStam = (int) staminaBar.GetStamina();
-        print("updated stamina bar is: " + staminaBar.name);
+        //print("updated stamina bar is: " + staminaBar.name);
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        print("current health is:" + currentHealth);
+        //print("current health is:" + currentHealth);
         healthBar.SetHealth(currentHealth);
-        print("current health bar is: " + healthBar.name);
+        //print("current health bar is: " + healthBar.name);
     }
 
     public void LoseStam(int staminaToLose)
     {
         
-        print("current stamina bar is: " + staminaBar.name);
+        //print("current stamina bar is: " + staminaBar.name);
         currentStam -= staminaToLose;
-        print("current stamina is:" + currentStam);
+        //print("current stamina is:" + currentStam);
         staminaBar.SetStamina(currentStam);
     }
 
