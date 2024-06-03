@@ -11,14 +11,18 @@ public class PlayerHumanSet : MonoBehaviour
     public PlayerController enemyHealthBar;
     public bool isPunching;
     public bool isKicking;
+    public string firstPlayerTag = "Player1";
     public string otherPlayerTag = "Player2";
     public float punchCooldown = 1.0f;
     private float punchCooldownTimer = 0f;
     public bool isTouchingPlayer;
     public GameObject sword;
+    public TransformedSwordAttack transformSword;
     public bool isFacingRight;
     private string lastCollidedTag;
     public bool isSecondPlayer;
+    public float transformDamage = 1f;
+    public bool isBoosted = false;
     
 
     private void Awake()
@@ -56,6 +60,10 @@ public class PlayerHumanSet : MonoBehaviour
         {
             punchCooldownTimer -= Time.deltaTime;
         }
+        if(playerController.isTransformed == true && isBoosted == false){
+            transformDamage = transformDamage * 1.5f;
+            isBoosted = true;
+        }
     }
 
     public void Punch(InputAction.CallbackContext context)
@@ -87,7 +95,12 @@ public class PlayerHumanSet : MonoBehaviour
             Vector3 currentPosition = transform.position;
             print(yVal);
             Vector3 spawnPosition = currentPosition + new Vector3(yVal, 100f, 0);
-            Instantiate(sword, spawnPosition, Quaternion.identity);
+            if(playerController.isTransformed == true){
+                transformSword.direction = isFacingRight;
+                Instantiate(transformSword, spawnPosition, Quaternion.identity);
+            }else{
+                Instantiate(sword, spawnPosition, Quaternion.identity);
+            }
             punchCooldownTimer = punchCooldown;
         }
         if (context.canceled)
@@ -104,7 +117,7 @@ public class PlayerHumanSet : MonoBehaviour
             isKicking = true;
             if(isTouchingPlayer == true)
                 {
-                    enemyHealthBar.TakeDamage(15);
+                    enemyHealthBar.TakeDamage((int)(15f * transformDamage));
                 }
             punchCooldownTimer = punchCooldown;
         }
@@ -116,7 +129,7 @@ public class PlayerHumanSet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(otherPlayerTag))
+        if (collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag))
         {
             isTouchingPlayer = true;
         }
@@ -124,7 +137,7 @@ public class PlayerHumanSet : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(otherPlayerTag))
+        if (collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag))
         {
             isTouchingPlayer = false;
         }

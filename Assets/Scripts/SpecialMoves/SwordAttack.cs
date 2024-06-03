@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class swordAttack : MonoBehaviour
+public class SwordAttack : MonoBehaviour
 {
 
     public int damageAmount = 4;
+    public string firstPlayerTag = "Player1";
     public string otherPlayerTag = "Player2";
 
     // Start is called before the first frame update
@@ -25,7 +26,7 @@ public class swordAttack : MonoBehaviour
         print("Collision");
         // Check if the object entering the trigger has the PlayerHealth component
         PlayerController playerHealth = collision.gameObject.GetComponent<PlayerController>();
-        if (collision.gameObject.CompareTag(otherPlayerTag))
+        if (collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag))
         {
             // Call the TakeDamage method on the player
             playerHealth.TakeDamage(damageAmount);

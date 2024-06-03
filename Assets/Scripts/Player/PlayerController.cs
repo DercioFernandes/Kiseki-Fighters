@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public int currentStam;
     public HealthBar healthBar;
     public StaminaBar staminaBar;
+    public bool isTransformable;
+    public bool isTransformed;
 
 
 
@@ -21,6 +24,8 @@ public class PlayerController : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetHealth(currentHealth);
         //print("current stamina bar is: " + staminaBar.name);
+        isTransformable = false;
+        isTransformed = false;
     }
 
     // Update is called once per frame
@@ -28,10 +33,11 @@ public class PlayerController : MonoBehaviour
     {
         currentStam = (int) staminaBar.GetStamina();
         healthBar.SetHealth(currentHealth);
+        if(currentHealth <= maxHealth * 0.3f)
+            isTransformable = true;
         if(currentHealth <= 0){
             print("Game Over)");
         }
-        //print("updated stamina bar is: " + staminaBar.name);
     }
 
     public void TakeDamage(int damage)
@@ -55,6 +61,22 @@ public class PlayerController : MonoBehaviour
         return (int) currentStam;
     }
 
+    public void Transform(InputAction.CallbackContext context)
+    {
+        if(isTransformable == true){
+            if(context.performed)
+            {
+                currentHealth = maxHealth;
+                staminaBar.SetStamina(maxStamina);
+                isTransformed = true;
+            }
+
+            if(context.canceled){
+                //animation
+            }
+        }
+    }
+
     IEnumerator RunContinuously(float startTime)
     {
         // Wait for the initial start time
@@ -66,6 +88,12 @@ public class PlayerController : MonoBehaviour
             // Your repeated action goes here
             float stamina = staminaBar.GetStamina();
             staminaBar.SetStamina((int)stamina + 1);
+            if(isTransformed == true){
+                currentHealth += 5;
+                if(currentHealth > maxHealth){
+                    currentHealth = maxHealth;
+                }
+            }
 
             // Yield control back to Unity and wait for the next frame before continuing the loop
             yield return new WaitForSeconds(1);

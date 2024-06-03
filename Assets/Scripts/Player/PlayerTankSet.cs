@@ -11,6 +11,7 @@ public class PlayerTankSet : MonoBehaviour
     public HealthBar enemyHealthBar;
     public bool isPunching;
     public bool isKicking;
+    public string firstPlayerTag = "Player1";
     public string otherPlayerTag = "Player2";
     public float punchCooldown = 1.0f;
     private float punchCooldownTimer = 0f;
@@ -78,7 +79,7 @@ public class PlayerTankSet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(otherPlayerTag))
+        if (collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag))
         {
             isTouchingPlayer = true;
         }
@@ -86,7 +87,7 @@ public class PlayerTankSet : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(otherPlayerTag))
+        if (collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag))
         {
             isTouchingPlayer = false;
         }

@@ -88,7 +88,12 @@ public class CharacterSpawner : MonoBehaviour
         if (character != null)
         {
             GameObject instantiatedCharacter = Instantiate(character, position, rotation);
-            instantiatedCharacter.tag = "Player2";
+            if(isSecond){
+                instantiatedCharacter.tag = "Player2";
+            }else{
+                instantiatedCharacter.tag = "Player1";
+            }
+            
             SpawnUIBar(instantiatedCharacter, parentCanvas,isSecond);
             return instantiatedCharacter;
         }

@@ -11,15 +11,21 @@ public class PlayerElfSet : MonoBehaviour
     public PlayerController enemyHealthBar;
     public bool isPunching;
     public bool isKicking;
+    public string firstPlayerTag = "Player1";
     public string otherPlayerTag = "Player2";
     public float punchCooldown = 1.0f;
     private float punchCooldownTimer = 0f;
     public bool isTouchingPlayer;
     public GameObject magicAttack;
+    public GameObject transformedMagicAttack;
     private string lastCollidedTag;
     private bool isFacingRight = true;
     public MagicAttack mA;
     public bool isSecondPlayer;
+    public float transformDamage = 1f;
+    public bool isBoosted = false;
+    //private string currentTag;
+    //private GameObject currentPlayer;
 
     private void Awake()
     {
@@ -29,6 +35,9 @@ public class PlayerElfSet : MonoBehaviour
 
     private void Start()
     {
+        //string currentTag = gameObject.tag;
+        //currentPlayer = gameObject.FindWithTag(currentTag);
+        //= currentPlayer.GetComponent<PlayerController>
         isPunching = false;
         isKicking = false;
         isTouchingPlayer = false;
@@ -59,7 +68,10 @@ public class PlayerElfSet : MonoBehaviour
         {
             punchCooldownTimer -= Time.deltaTime;
         }
-        
+        if(playerController.isTransformed == true && isBoosted == false){
+            transformDamage = transformDamage * 1.5f;
+            isBoosted = true;
+        }
     }
 
     public void Punch(InputAction.CallbackContext context)
@@ -89,7 +101,11 @@ public class PlayerElfSet : MonoBehaviour
             }
             Vector3 spawnPosition = currentPosition + new Vector3(yVal, 100f, 0);
             mA.direction = isFacingRight;
-            Instantiate(magicAttack, spawnPosition, Quaternion.identity);
+            if(playerController.isTransformed == true){
+                Instantiate(transformedMagicAttack, spawnPosition, Quaternion.identity);
+            }else{
+                Instantiate(magicAttack, spawnPosition, Quaternion.identity);
+            }
             punchCooldownTimer = punchCooldown;
         }
         if (context.canceled)
@@ -107,7 +123,7 @@ public class PlayerElfSet : MonoBehaviour
             isKicking = true;
             if(isTouchingPlayer == true)
                 {
-                    enemyHealthBar.TakeDamage(15);
+                    enemyHealthBar.TakeDamage((int)(15f * transformDamage));
                 }
             punchCooldownTimer = punchCooldown;
         }
@@ -119,16 +135,15 @@ public class PlayerElfSet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(otherPlayerTag))
+        if (collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag))
         {
             isTouchingPlayer = true;
-            print("hit player");
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(otherPlayerTag))
+        if (collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag))
         {
             isTouchingPlayer = false;
         }

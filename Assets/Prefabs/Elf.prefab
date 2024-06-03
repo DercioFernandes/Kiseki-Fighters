@@ -473,6 +473,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f49bea54-8461-488d-9635-be68cecf0de6
     m_ActionName: ARROW/Kick[/Keyboard/n]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5174515628309387736}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Transform
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 71c2650a-f021-4aed-83c7-bd4f0303ecce
+    m_ActionName: WASD/Transform[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5174515628309387736}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Transform
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: cae7b43e-30e2-4c9c-875e-4068b19c5952
+    m_ActionName: ARROW/Transform[/Keyboard/b]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: WASD
@@ -496,6 +528,8 @@ MonoBehaviour:
   currentStam: 0
   healthBar: {fileID: 0}
   staminaBar: {fileID: 0}
+  isTransformable: 0
+  isTransformed: 0
 --- !u!114 &8722711753140194700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,12 +546,15 @@ MonoBehaviour:
   enemyHealthBar: {fileID: 0}
   isPunching: 0
   isKicking: 0
+  firstPlayerTag: Player1
   otherPlayerTag: Player2
   punchCooldown: 1
   isTouchingPlayer: 0
   sword: {fileID: 0}
   isFacingRight: 0
   isSecondPlayer: 0
+  transformDamage: 1
+  isBoosted: 0
 --- !u!114 &3840813025567232143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,12 +571,16 @@ MonoBehaviour:
   enemyHealthBar: {fileID: 0}
   isPunching: 0
   isKicking: 0
+  firstPlayerTag: Player1
   otherPlayerTag: Player2
   punchCooldown: 1
   isTouchingPlayer: 0
   magicAttack: {fileID: 9214154449930340453, guid: b4a050b8a983adc4aab5caa866b11d2a, type: 3}
+  transformedMagicAttack: {fileID: 9214154449930340453, guid: f6e0da6a460e78342ab8f5d9841e0ade, type: 3}
   mA: {fileID: 0}
   isSecondPlayer: 0
+  transformDamage: 1
+  isBoosted: 0
 --- !u!1 &6911750491631383055
 GameObject:
   m_ObjectHideFlags: 0
