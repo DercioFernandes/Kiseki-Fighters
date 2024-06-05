@@ -13,7 +13,7 @@ public class PlayerElfSet : MonoBehaviour
     public bool isKicking;
     public string firstPlayerTag = "Player1";
     public string otherPlayerTag = "Player2";
-    public float punchCooldown = 1.0f;
+    public float punchCooldown = 0.1f;
     private float punchCooldownTimer = 0f;
     public bool isTouchingPlayer;
     public GameObject magicAttack;
@@ -24,6 +24,7 @@ public class PlayerElfSet : MonoBehaviour
     public bool isSecondPlayer;
     public float transformDamage = 1f;
     public bool isBoosted = false;
+    private string currentTag;
     //private string currentTag;
     //private GameObject currentPlayer;
 
@@ -50,18 +51,19 @@ public class PlayerElfSet : MonoBehaviour
         if (hit.collider != null)
         {
             lastCollidedTag = hit.collider.gameObject.tag;
-            Debug.Log("Last collided object tag: " + lastCollidedTag);
+            //Debug.Log("Last collided object tag: " + lastCollidedTag);
             if (lastCollidedTag == "Left") {
                 isSecondPlayer = true;
             }else{
                 isSecondPlayer = false;
             }
         }
+        currentTag = gameObject.tag;
     }
 
     void Update()
     {
-        print(isFacingRight);
+        //print(isFacingRight);
         animator.SetBool("isPunching", isPunching);
         animator.SetBool("isKicking", isKicking);
         if (punchCooldownTimer > 0)
@@ -78,8 +80,8 @@ public class PlayerElfSet : MonoBehaviour
     {
         if (context.started && punchCooldownTimer <= 0 && isKicking == false && playerController.GetStam() >= 4)
         {
-            playerController.LoseStam(4);
-            //isPunching = true;
+            playerController.LoseStam(3);
+            isPunching = true;
             Vector3 currentPosition = transform.position;
             float yVal = 0f;
             if(isSecondPlayer == true){
@@ -99,11 +101,17 @@ public class PlayerElfSet : MonoBehaviour
                     yVal = -200f;
                 }
             }
-            Vector3 spawnPosition = currentPosition + new Vector3(yVal, 100f, 0);
+            Vector3 spawnPosition = currentPosition + new Vector3(yVal, 200f, 0);
             mA.direction = isFacingRight;
             if(playerController.isTransformed == true){
+                playerController.LoseStam(3);
+                punchCooldown = 10f;
+                TransformedMagicAttack taM = transformedMagicAttack.GetComponent<TransformedMagicAttack>();
+                taM.currentTag = currentTag;
+                spawnPosition = currentPosition + new Vector3(yVal, 1f, 0);
                 Instantiate(transformedMagicAttack, spawnPosition, Quaternion.identity);
             }else{
+                mA.currentTag = currentTag;
                 Instantiate(magicAttack, spawnPosition, Quaternion.identity);
             }
             punchCooldownTimer = punchCooldown;
@@ -116,20 +124,36 @@ public class PlayerElfSet : MonoBehaviour
 
     public void Kick(InputAction.CallbackContext context)
     {
-        if (context.started && punchCooldownTimer <= 0 && isPunching == false && playerController.GetStam()  >= 4)
+        if (context.started && isPunching == false && playerController.GetStam()  >= 4)
         {
-            print("kicking");
+            //print("kicking");
             playerController.LoseStam(4);
             isKicking = true;
             if(isTouchingPlayer == true)
                 {
-                    enemyHealthBar.TakeDamage((int)(15f * transformDamage));
+                    enemyHealthBar.TakeDamage((int)(10f * transformDamage));
                 }
             punchCooldownTimer = punchCooldown;
         }
         if (context.canceled)
         {
             isKicking = false;
+        }
+    }
+
+    public void Guard(InputAction.CallbackContext context)
+    {
+        if(playerController.GetStam() > 0){
+            if(context.performed )
+            {
+                animator.SetBool("isGuarding", true);
+                playerController.isDefending = true;
+            }
+
+            if(context.canceled){
+                animator.SetBool("isGuarding", false);
+                playerController.isDefending = false;
+            }
         }
     }
 

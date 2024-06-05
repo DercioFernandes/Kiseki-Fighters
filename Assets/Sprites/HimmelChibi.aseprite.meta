@@ -1,0 +1,811 @@
+fileFormatVersion: 2
+guid: 8041005b4fe372d4087c3d890ad12be8
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: HimmelChibi_Frame_0
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 45
+      width: 26
+      height: 33
+    spriteID: 2550a198d988efc42a0e8a9d33d56507
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 45}
+  - name: HimmelChibi_Frame_1
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 86
+      width: 26
+      height: 33
+    spriteID: 3aae44aff6159b24596536ecf9e51446
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 86}
+  - name: HimmelChibi_Frame_2
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 127
+      width: 26
+      height: 33
+    spriteID: f089f1b576468f94c9f3647e1e6153a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 127}
+  - name: HimmelChibi_Frame_3
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 168
+      width: 26
+      height: 33
+    spriteID: 2f81df14ef93b6b4ca6ceeb47f09b251
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 168}
+  - name: HimmelChibi_Frame_4
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 209
+      width: 26
+      height: 33
+    spriteID: e42846ca1e265d8488c9823f65813c90
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 209}
+  - name: HimmelChibi_Frame_5
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 4
+      width: 26
+      height: 33
+    spriteID: c737f300aea92494c96db00c70471c7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 4}
+  - name: HimmelChibi_Frame_6
+    originalName: 
+    pivot: {x: 0.90000004, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 53
+      y: 128
+      width: 30
+      height: 33
+    spriteID: 07205b5c3a7f0f84586b8714f0c3e03d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 53, y: 128}
+  - name: HimmelChibi_Frame_7
+    originalName: 
+    pivot: {x: 0.9310345, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 53
+      y: 210
+      width: 29
+      height: 33
+    spriteID: 9b8ba47a3d4edce478f6e1e8f2f417cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 53, y: 210}
+  - name: HimmelChibi_Frame_8
+    originalName: 
+    pivot: {x: 0.7941176, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 147
+      width: 34
+      height: 33
+    spriteID: 6af42e497ed472d4a8bed7f17dd7fe0f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 147}
+  - name: HimmelChibi_Frame_9
+    originalName: 
+    pivot: {x: 0.90000004, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 53
+      y: 169
+      width: 30
+      height: 33
+    spriteID: f4564bec862844c4c855a5ef84929a10
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 53, y: 169}
+  - name: HimmelChibi_Frame_10
+    originalName: 
+    pivot: {x: 0.45945948, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 106
+      width: 37
+      height: 33
+    spriteID: 352952c228866ca458dfdf743c0e26f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 106}
+  - name: HimmelChibi_Frame_11
+    originalName: 
+    pivot: {x: 0.84375, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 53
+      y: 87
+      width: 32
+      height: 33
+    spriteID: 22f7c864541a0a34f923e665cf4db75a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 53, y: 87}
+  - name: HimmelChibi_Frame_12
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 45
+      width: 26
+      height: 33
+    spriteID: 647b7b67805fdaf42a50c5ef57c383bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 45}
+  - name: HimmelChibi_Frame_13
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 86
+      width: 26
+      height: 33
+    spriteID: a1d301d37c16a42428ea49f744416aaa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 86}
+  - name: HimmelChibi_Frame_14
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 127
+      width: 26
+      height: 33
+    spriteID: dc01665db413adf4889ac92708cadf64
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 127}
+  - name: HimmelChibi_Frame_15
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 168
+      width: 26
+      height: 33
+    spriteID: 8604edf6ada1509478aad83d9bd45e64
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 168}
+  - name: HimmelChibi_Frame_16
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 209
+      width: 26
+      height: 33
+    spriteID: 5669ea15f87f9134a95c08ac8521f4fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 209}
+  - name: HimmelChibi_Frame_17
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 4
+      width: 26
+      height: 33
+    spriteID: 48bcbea9ab268724786b825bb389217e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 4}
+  - name: HimmelChibi_Frame_18
+    originalName: 
+    pivot: {x: 0.7058824, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 188
+      width: 34
+      height: 33
+    spriteID: 2f71ee973d43b0e40aa11a08a085e360
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 188}
+  - name: HimmelChibi_Frame_19
+    originalName: 
+    pivot: {x: 0.6428572, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 4
+      width: 28
+      height: 33
+    spriteID: b2cf84d164ab06a41b45fdd542245065
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 4}
+  - name: HimmelChibi_Frame_20
+    originalName: 
+    pivot: {x: 0.7058824, y: -0.54545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 53
+      y: 4
+      width: 34
+      height: 33
+    spriteID: 5255c891c71b0bb40b8de22bd16d8d5c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 53, y: 4}
+  - name: HimmelChibi_Frame_21
+    originalName: 
+    pivot: {x: 0.7804878, y: -0.36956522}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 41
+      height: 46
+    spriteID: ba841c1d60b2bb3479239b23b688765e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: HimmelChibi_Frame_22
+    originalName: 
+    pivot: {x: 0.41025642, y: -0.425}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 58
+      width: 39
+      height: 40
+    spriteID: f9f55fdb838a4f54baaa2580129f1f77
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 58}
+  - name: HimmelChibi_Frame_23
+    originalName: 
+    pivot: {x: 0.84375, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 53
+      y: 45
+      width: 32
+      height: 34
+    spriteID: caf5c4ce97f2e624d843518678f2d6a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 53, y: 45}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 799812117
+    name: HimmelChibi
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: HimmelChibi_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 33
+      spriteId: 2550a198d988efc42a0e8a9d33d56507
+    - name: HimmelChibi_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 33
+      spriteId: 3aae44aff6159b24596536ecf9e51446
+    - name: HimmelChibi_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 33
+      spriteId: f089f1b576468f94c9f3647e1e6153a5
+    - name: HimmelChibi_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 33
+      spriteId: 2f81df14ef93b6b4ca6ceeb47f09b251
+    - name: HimmelChibi_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 33
+      spriteId: e42846ca1e265d8488c9823f65813c90
+    - name: HimmelChibi_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 33
+      spriteId: c737f300aea92494c96db00c70471c7d
+    - name: HimmelChibi_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 5
+        y: 18
+        width: 30
+        height: 33
+      spriteId: 07205b5c3a7f0f84586b8714f0c3e03d
+    - name: HimmelChibi_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 5
+        y: 18
+        width: 29
+        height: 33
+      spriteId: 9b8ba47a3d4edce478f6e1e8f2f417cd
+    - name: HimmelChibi_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 5
+        y: 18
+        width: 34
+        height: 33
+      spriteId: 6af42e497ed472d4a8bed7f17dd7fe0f
+    - name: HimmelChibi_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 5
+        y: 18
+        width: 30
+        height: 33
+      spriteId: f4564bec862844c4c855a5ef84929a10
+    - name: HimmelChibi_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 15
+        y: 18
+        width: 37
+        height: 33
+      spriteId: 352952c228866ca458dfdf743c0e26f6
+    - name: HimmelChibi_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 5
+        y: 18
+        width: 32
+        height: 33
+      spriteId: 22f7c864541a0a34f923e665cf4db75a
+    - name: HimmelChibi_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 33
+      spriteId: 647b7b67805fdaf42a50c5ef57c383bb
+    - name: HimmelChibi_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 33
+      spriteId: a1d301d37c16a42428ea49f744416aaa
+    - name: HimmelChibi_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 33
+      spriteId: dc01665db413adf4889ac92708cadf64
+    - name: HimmelChibi_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 33
+      spriteId: 8604edf6ada1509478aad83d9bd45e64
+    - name: HimmelChibi_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 33
+      spriteId: 5669ea15f87f9134a95c08ac8521f4fd
+    - name: HimmelChibi_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 33
+      spriteId: 48bcbea9ab268724786b825bb389217e
+    - name: HimmelChibi_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 8
+        y: 18
+        width: 34
+        height: 33
+      spriteId: 2f71ee973d43b0e40aa11a08a085e360
+    - name: HimmelChibi_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 14
+        y: 18
+        width: 28
+        height: 33
+      spriteId: b2cf84d164ab06a41b45fdd542245065
+    - name: HimmelChibi_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 8
+        y: 18
+        width: 34
+        height: 33
+      spriteId: 5255c891c71b0bb40b8de22bd16d8d5c
+    - name: HimmelChibi_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 0
+        y: 17
+        width: 41
+        height: 46
+      spriteId: ba841c1d60b2bb3479239b23b688765e
+    - name: HimmelChibi_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 16
+        y: 17
+        width: 39
+        height: 40
+      spriteId: f9f55fdb838a4f54baaa2580129f1f77
+    - name: HimmelChibi_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 5
+        y: 17
+        width: 32
+        height: 34
+      spriteId: caf5c4ce97f2e624d843518678f2d6a9
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}

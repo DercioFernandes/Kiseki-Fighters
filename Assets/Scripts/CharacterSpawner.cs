@@ -8,8 +8,8 @@ public class CharacterSpawner : MonoBehaviour
     //public GameObject charPrefab;
 
     public CharacterDatabase characterDB;
-    private int selectedOption = 0;
-    private int secondSelectedOption = 0;
+    private int selectedOption;
+    private int secondSelectedOption;
     public GameObject uiBarPrefab;
     //public Transform uiCanvas; 
     public Transform uiCanvas1;
@@ -29,20 +29,29 @@ public class CharacterSpawner : MonoBehaviour
     {
         if(!PlayerPrefs.HasKey("selectedOption"))
         {
+            print("There is no SelecedOption");
             selectedOption = 0;
+        }else{
+            selectedOption = PlayerPrefs.GetInt("selectedOption");
         }
         if(!PlayerPrefs.HasKey("secondSelectedOption"))
         {
+            print("There is no SecondSelecedOption");
             secondSelectedOption = 0;
+        }else{
+            secondSelectedOption = PlayerPrefs.GetInt("secondSelectedOption");
         }
         Load();
         GameObject char1 = UpdateCharacter(selectedOption);
+        PlayerInput playerInput1 = char1.GetComponent<PlayerInput>();
+        playerInput1.defaultActionMap = "WASD";
+        print(playerInput1.defaultActionMap);
         GameObject spawnedChar1 = SpawnPrefab(char1, spawnPosition, spawnRotation, uiCanvas1, false);
         
         Vector3 secondSpawnPosition = new Vector3(spawnPosition.x + 1300f, spawnPosition.y, spawnPosition.z);
         GameObject char2 = UpdateCharacter(secondSelectedOption);
-        PlayerInput playerInput = char2.GetComponent<PlayerInput>();
-        playerInput.defaultActionMap = "ARROW";
+        PlayerInput playerInput2 = char2.GetComponent<PlayerInput>();
+        playerInput2.defaultActionMap = "ARROW";
         GameObject spawnedChar2 = SpawnPrefab(char2, secondSpawnPosition, Quaternion.Euler(0f, 180f, 0f), uiCanvas2, true);
 
         //After both are spawned
@@ -106,7 +115,6 @@ public class CharacterSpawner : MonoBehaviour
 
     void SpawnUIBar(GameObject player, Transform parentCanvas, bool isSecond=false)
     {
-        Debug.Log("UI bar spawned for " + player.name);
         GameObject uiBar = Instantiate(uiBarPrefab, parentCanvas);
         uiBar.name = player.name + "UIBar";  // Set unique name for each UI bar
 
@@ -123,9 +131,6 @@ public class CharacterSpawner : MonoBehaviour
         // Link the sliders to the player script
         playerController.healthBar = healthSlider;
         playerController.staminaBar = staminaSlider;
-        
-        Debug.Log("Assigned HealthBar to " + player.name + ": " + healthSlider.name);
-        Debug.Log("Assigned StaminaBar to " + player.name + ": " + staminaSlider.name);
 
         //print("Type: ");
         //print(playerController.healthBar);

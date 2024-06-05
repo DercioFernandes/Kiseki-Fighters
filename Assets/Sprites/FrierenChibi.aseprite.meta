@@ -1,0 +1,867 @@
+fileFormatVersion: 2
+guid: a451265ac4cea334c82f0edb8d9f61ab
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: FrierenChibi_Frame_0
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.4864865}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 285
+      width: 26
+      height: 37
+    spriteID: c5e3ac3af2292894bbd064f3ca3fb29d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 285}
+  - name: FrierenChibi_Frame_1
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.4864865}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 330
+      width: 26
+      height: 37
+    spriteID: f3cb7b64548682a41a5755dcb5b5f30b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 330}
+  - name: FrierenChibi_Frame_2
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.4864865}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 375
+      width: 26
+      height: 37
+    spriteID: de830a9fa8e7c0145b9853373e5b6be8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 375}
+  - name: FrierenChibi_Frame_3
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.4864865}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 420
+      width: 26
+      height: 37
+    spriteID: 2f9e2c0946087274b8189ebaee6ef9d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 420}
+  - name: FrierenChibi_Frame_4
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.4864865}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 465
+      width: 26
+      height: 37
+    spriteID: 3f5c822c197af8b4db28a6df02d5eddf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 465}
+  - name: FrierenChibi_Frame_5
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.4864865}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 122
+      y: 4
+      width: 26
+      height: 37
+    spriteID: 721dae6b02703bb42aae35eb087cb96e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 122, y: 4}
+  - name: FrierenChibi_Frame_6
+    originalName: 
+    pivot: {x: 0.8888889, y: -0.4864865}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 240
+      width: 27
+      height: 37
+    spriteID: aefb12097181e074bbc2988f226f8d0e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 240}
+  - name: FrierenChibi_Frame_7
+    originalName: 
+    pivot: {x: 0.923077, y: -0.4864865}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 122
+      y: 49
+      width: 26
+      height: 37
+    spriteID: 7dd52e56a3d1a0a44b5e52fc6fa38b66
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 122, y: 49}
+  - name: FrierenChibi_Frame_8
+    originalName: 
+    pivot: {x: 0.7307693, y: -0.4864865}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 122
+      y: 94
+      width: 26
+      height: 37
+    spriteID: 067df2aaad6ed8d488a24ac3797e7f86
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 122, y: 94}
+  - name: FrierenChibi_Frame_9
+    originalName: 
+    pivot: {x: 0.4528302, y: -0.30952382}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 4
+      width: 53
+      height: 42
+    spriteID: 9acd7b9a874be6544a38937558e2d3e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 4}
+  - name: FrierenChibi_Frame_10
+    originalName: 
+    pivot: {x: 0.4528302, y: -0.30952382}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 54
+      width: 53
+      height: 42
+    spriteID: b4410cdb61538be4786fe8c72199423c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 54}
+  - name: FrierenChibi_Frame_11
+    originalName: 
+    pivot: {x: 0.7619048, y: -0.4864865}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 122
+      y: 181
+      width: 21
+      height: 37
+    spriteID: 2f3ffa7f5a8a2734fa880a6c59264c52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 122, y: 181}
+  - name: FrierenChibi_Frame_12
+    originalName: 
+    pivot: {x: 0.40816325, y: -0.23529413}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 49
+      height: 51
+    spriteID: 1933a1b652c7706458ac09459e0c1b89
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: FrierenChibi_Frame_13
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.25490198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 122
+      width: 46
+      height: 51
+    spriteID: e80f58b51e2bec44190d31f57270750b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 122}
+  - name: FrierenChibi_Frame_14
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.25490198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 181
+      width: 46
+      height: 51
+    spriteID: f95c81ebd415c154ea43d09f2caf7165
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 181}
+  - name: FrierenChibi_Frame_15
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.25490198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 240
+      width: 46
+      height: 51
+    spriteID: 0c5c0c95dec6c0842a27b39269e78d73
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 240}
+  - name: FrierenChibi_Frame_16
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.25490198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 299
+      width: 46
+      height: 51
+    spriteID: e08fba4c77d445f48b8576232899ec8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 299}
+  - name: FrierenChibi_Frame_17
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.25490198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 358
+      width: 46
+      height: 51
+    spriteID: ee06323ef2aebc24a8403a5810ee309a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 358}
+  - name: FrierenChibi_Frame_18
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.25490198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 417
+      width: 46
+      height: 51
+    spriteID: 202dcf96f073e934cbbcd9dd58d0f6c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 417}
+  - name: FrierenChibi_Frame_19
+    originalName: 
+    pivot: {x: 0.8965517, y: -0.51428574}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 197
+      width: 29
+      height: 35
+    spriteID: 23de6c1d14f04d64dac9d6d51ee2fed0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 197}
+  - name: FrierenChibi_Frame_20
+    originalName: 
+    pivot: {x: 0.9259259, y: -0.51428574}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 156
+      y: 4
+      width: 27
+      height: 35
+    spriteID: 5141e3497614ad842b467eec44700236
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 156, y: 4}
+  - name: FrierenChibi_Frame_21
+    originalName: 
+    pivot: {x: 0.7307693, y: -0.5294118}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 122
+      y: 139
+      width: 26
+      height: 34
+    spriteID: 774174314da8566409c3e136d5df6df1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 122, y: 139}
+  - name: FrierenChibi_Frame_22
+    originalName: 
+    pivot: {x: 0.7741935, y: -0.4473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 104
+      width: 31
+      height: 38
+    spriteID: ad4e0c32478670a45ab0492f3c56bea8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 104}
+  - name: FrierenChibi_Frame_23
+    originalName: 
+    pivot: {x: 0.7241379, y: -0.46153846}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 150
+      width: 29
+      height: 39
+    spriteID: 07174b51879ddd848a98e1ca1b3d4951
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 61, y: 150}
+  - name: FrierenChibi_Frame_24
+    originalName: 
+    pivot: {x: 0.7619048, y: -0.5294118}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 122
+      y: 226
+      width: 21
+      height: 34
+    spriteID: e1cc3c59ae3077f47851c31db175a495
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 122, y: 226}
+  - name: FrierenChibi_Frame_25
+    originalName: 
+    pivot: {x: 0.40816325, y: -0.23529413}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 63
+      width: 49
+      height: 51
+    spriteID: e2e108d1a0e84d64a8f79d7afdb9fd06
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 63}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -322223424
+    name: FrierenChibi
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: FrierenChibi_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 37
+      spriteId: c5e3ac3af2292894bbd064f3ca3fb29d
+    - name: FrierenChibi_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 37
+      spriteId: f3cb7b64548682a41a5755dcb5b5f30b
+    - name: FrierenChibi_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 37
+      spriteId: de830a9fa8e7c0145b9853373e5b6be8
+    - name: FrierenChibi_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 37
+      spriteId: 2f9e2c0946087274b8189ebaee6ef9d9
+    - name: FrierenChibi_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 37
+      spriteId: 3f5c822c197af8b4db28a6df02d5eddf
+    - name: FrierenChibi_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 16
+        y: 18
+        width: 26
+        height: 37
+      spriteId: 721dae6b02703bb42aae35eb087cb96e
+    - name: FrierenChibi_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 8
+        y: 18
+        width: 27
+        height: 37
+      spriteId: aefb12097181e074bbc2988f226f8d0e
+    - name: FrierenChibi_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 8
+        y: 18
+        width: 26
+        height: 37
+      spriteId: 7dd52e56a3d1a0a44b5e52fc6fa38b66
+    - name: FrierenChibi_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 13
+        y: 18
+        width: 26
+        height: 37
+      spriteId: 067df2aaad6ed8d488a24ac3797e7f86
+    - name: FrierenChibi_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 8
+        y: 13
+        width: 53
+        height: 42
+      spriteId: 9acd7b9a874be6544a38937558e2d3e2
+    - name: FrierenChibi_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 8
+        y: 13
+        width: 53
+        height: 42
+      spriteId: b4410cdb61538be4786fe8c72199423c
+    - name: FrierenChibi_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 16
+        y: 18
+        width: 21
+        height: 37
+      spriteId: 2f3ffa7f5a8a2734fa880a6c59264c52
+    - name: FrierenChibi_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 12
+        y: 12
+        width: 49
+        height: 51
+      spriteId: 1933a1b652c7706458ac09459e0c1b89
+    - name: FrierenChibi_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 16
+        y: 13
+        width: 46
+        height: 51
+      spriteId: e80f58b51e2bec44190d31f57270750b
+    - name: FrierenChibi_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 16
+        y: 13
+        width: 46
+        height: 51
+      spriteId: f95c81ebd415c154ea43d09f2caf7165
+    - name: FrierenChibi_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 16
+        y: 13
+        width: 46
+        height: 51
+      spriteId: 0c5c0c95dec6c0842a27b39269e78d73
+    - name: FrierenChibi_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 16
+        y: 13
+        width: 46
+        height: 51
+      spriteId: e08fba4c77d445f48b8576232899ec8c
+    - name: FrierenChibi_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 16
+        y: 13
+        width: 46
+        height: 51
+      spriteId: ee06323ef2aebc24a8403a5810ee309a
+    - name: FrierenChibi_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 16
+        y: 13
+        width: 46
+        height: 51
+      spriteId: 202dcf96f073e934cbbcd9dd58d0f6c4
+    - name: FrierenChibi_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 6
+        y: 18
+        width: 29
+        height: 35
+      spriteId: 23de6c1d14f04d64dac9d6d51ee2fed0
+    - name: FrierenChibi_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 7
+        y: 18
+        width: 27
+        height: 35
+      spriteId: 5141e3497614ad842b467eec44700236
+    - name: FrierenChibi_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 13
+        y: 18
+        width: 26
+        height: 34
+      spriteId: 774174314da8566409c3e136d5df6df1
+    - name: FrierenChibi_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 8
+        y: 17
+        width: 31
+        height: 38
+      spriteId: ad4e0c32478670a45ab0492f3c56bea8
+    - name: FrierenChibi_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 11
+        y: 18
+        width: 29
+        height: 39
+      spriteId: 07174b51879ddd848a98e1ca1b3d4951
+    - name: FrierenChibi_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 16
+        y: 18
+        width: 21
+        height: 34
+      spriteId: e1cc3c59ae3077f47851c31db175a495
+    - name: FrierenChibi_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 12
+        y: 12
+        width: 49
+        height: 51
+      spriteId: e2e108d1a0e84d64a8f79d7afdb9fd06
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}

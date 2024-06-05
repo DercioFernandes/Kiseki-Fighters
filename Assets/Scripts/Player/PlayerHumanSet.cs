@@ -13,7 +13,7 @@ public class PlayerHumanSet : MonoBehaviour
     public bool isKicking;
     public string firstPlayerTag = "Player1";
     public string otherPlayerTag = "Player2";
-    public float punchCooldown = 1.0f;
+    public float punchCooldown = 0.2f;
     private float punchCooldownTimer = 0f;
     public bool isTouchingPlayer;
     public GameObject sword;
@@ -23,6 +23,7 @@ public class PlayerHumanSet : MonoBehaviour
     public bool isSecondPlayer;
     public float transformDamage = 1f;
     public bool isBoosted = false;
+    private string currentTag;
     
 
     private void Awake()
@@ -43,13 +44,14 @@ public class PlayerHumanSet : MonoBehaviour
         if (hit.collider != null)
         {
             lastCollidedTag = hit.collider.gameObject.tag;
-            Debug.Log("Last collided object tag: " + lastCollidedTag);
+            //Debug.Log("Last collided object tag: " + lastCollidedTag);
             if (lastCollidedTag == "Left") {
                 isSecondPlayer = true;
             }else{
                 isSecondPlayer = false;
             }
         }
+        currentTag = gameObject.tag;
     }
 
     void Update()
@@ -70,7 +72,7 @@ public class PlayerHumanSet : MonoBehaviour
     {
         if (context.started && punchCooldownTimer <= 0 && isKicking == false && playerController.GetStam() >= 2)
         {
-            playerController.LoseStam(2);
+            playerController.LoseStam(1);
             isPunching = true;
             float yVal = 0f;
             if(isSecondPlayer == true){
@@ -91,14 +93,22 @@ public class PlayerHumanSet : MonoBehaviour
                 }
             }
             punchCooldownTimer = punchCooldown;
-            playerController.LoseStam(4);
             Vector3 currentPosition = transform.position;
             print(yVal);
             Vector3 spawnPosition = currentPosition + new Vector3(yVal, 100f, 0);
             if(playerController.isTransformed == true){
+                playerController.LoseStam(2);
+                punchCooldown = 5f;
                 transformSword.direction = isFacingRight;
+                TransformedSwordAttack taS = transformSword.GetComponent<TransformedSwordAttack>();
+                taS.currentTag = currentTag;
+                spawnPosition = currentPosition + new Vector3(yVal, 1f, 0);
                 Instantiate(transformSword, spawnPosition, Quaternion.identity);
             }else{
+                SwordAttack sa = sword.GetComponent<SwordAttack>();
+                sa.currentTag = currentTag;
+                sa.player = gameObject;
+                sa.offset = new Vector3(yVal, 100f, 0);
                 Instantiate(sword, spawnPosition, Quaternion.identity);
             }
             punchCooldownTimer = punchCooldown;
@@ -111,9 +121,9 @@ public class PlayerHumanSet : MonoBehaviour
 
     public void Kick(InputAction.CallbackContext context)
     {
-        if (context.started && punchCooldownTimer <= 0 && isPunching == false && playerController.GetStam()  >= 4)
+        if (context.started && isPunching == false && playerController.GetStam()  >= 4)
         {
-            playerController.LoseStam(4);
+            playerController.LoseStam(8);
             isKicking = true;
             if(isTouchingPlayer == true)
                 {
@@ -124,6 +134,22 @@ public class PlayerHumanSet : MonoBehaviour
         if (context.canceled)
         {
             isKicking = false;
+        }
+    }
+
+    public void Guard(InputAction.CallbackContext context)
+    {
+        if(playerController.GetStam() > 0){
+            if(context.performed )
+            {
+                animator.SetBool("isGuarding", true);
+                playerController.isDefending = true;
+            }
+
+            if(context.canceled){
+                animator.SetBool("isGuarding", false);
+                playerController.isDefending = false;
+            }
         }
     }
 

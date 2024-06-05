@@ -5,11 +5,12 @@ using UnityEngine;
 public class TransformedMagicAttack : MonoBehaviour
 {
 
-    public int damageAmount = 30;
+    public int damageAmount = 40;
     public string firstPlayerTag = "Player1";
     public string otherPlayerTag = "Player2";
     public bool direction = true;
     public Vector2 dir;
+    public string currentTag;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,8 @@ public class TransformedMagicAttack : MonoBehaviour
             dir = Vector2.right;
         }else{
             dir = Vector2.left;
+            Vector3 originalScale = transform.localScale;
+            transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
         }
         Destroy(gameObject, 2f);
     }
@@ -35,11 +38,10 @@ public class TransformedMagicAttack : MonoBehaviour
         print("Collision");
         // Check if the object entering the trigger has the PlayerHealth component
         PlayerController playerHealth = collision.gameObject.GetComponent<PlayerController>();
-        if (collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag))
+        if ((collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag)) && collision.gameObject.tag != currentTag)
         {
             // Call the TakeDamage method on the player
             playerHealth.TakeDamage(damageAmount);
-            print("damaged");
         }
     }
 }

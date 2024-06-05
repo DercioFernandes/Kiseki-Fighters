@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 500f;
     public float jumpForce = 500f;
     public float dashSpeed = 200f;
-    public float dashDistance = 200f;
+    public float dashDistance = 300f;
     
     private float initialRotationY;
     public PlayerController playerController;
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
         isRunning = rb.velocity.x != 0;
-        animator.SetBool("running", isRunning);
+        animator.SetBool("isRunning", isRunning);
         isJumping = rb.velocity.y != 0;
         animator.SetBool("isJumping", isJumping);
         if (initialRotationY == 180f)
@@ -78,7 +78,10 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         isRunning = false;
+        //print("Jump pressed");
         if(staminaBar.GetStam() > 0){
+            //print("is jumping)");
+            //print(isGrounder());
             if(context.performed && isGrounder())
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -96,19 +99,32 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed)
         {
             if(staminaBar.GetStam() > 0){
-                Vector3 targetPosition;
+                Vector3 targetPosition = transform.position;
                 //print("DASHED");
                 // Check the player's facing direction
-                    if (transform.localScale.x > 0)
+                if (transform.localScale.x > 0)
+                {
+                    float xLimit = transform.position.x - dashDistance;
+                    print(gameObject.tag);
+                    print(transform.position.x);
+                    if(xLimit < 0)
                     {
-                        // Player is facing right
+                        print("is on verge");
+                    }else{
                         targetPosition = transform.position + transform.right * dashDistance;
                     }
-                    else
+                }
+                else
+                {
+                    float lLimit = transform.position.x + dashDistance;
+                    // Player is facing left
+                    if(lLimit > 1800)
                     {
-                        // Player is facing left
+                        print("is on verge");
+                    }else{
                         targetPosition = transform.position - transform.right * dashDistance;
                     }
+                }
                 //print(targetPosition);
                 transform.position = targetPosition;
                 staminaBar.LoseStam(1);
@@ -117,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private bool isGrounder(){
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 2f, groundLayer);
     }
 
     private void Flip(){

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: New Character Database
   m_EditorClassIdentifier: 
   character:
-  - characterName: Fly
-    characterSprite: {fileID: -9213263429266876001, guid: 723ccbf3d892acf45959b945ef712302, type: 3}
+  - characterName: Himmel
+    characterSprite: {fileID: 3301062544420755182, guid: 8041005b4fe372d4087c3d890ad12be8, type: 3}
     characterPrefab: {fileID: 3502158981597555447, guid: d021e0768bb66cb499d98d2fcf637e19, type: 3}
   - characterName: Frieren
-    characterSprite: {fileID: -8918514819228227902, guid: ea1ddd52559b8894ca020893db8dcac7, type: 3}
+    characterSprite: {fileID: 6883775626913002, guid: a451265ac4cea334c82f0edb8d9f61ab, type: 3}
     characterPrefab: {fileID: 3502158981597555447, guid: 30e2c444d5465df4b911570d4a9166b1, type: 3}
   - characterName: Oka
-    characterSprite: {fileID: 21300000, guid: 34102d1a6a4b27147842dbaa93d6ed32, type: 3}
+    characterSprite: {fileID: -9213263429266876001, guid: 723ccbf3d892acf45959b945ef712302, type: 3}
     characterPrefab: {fileID: 3502158981597555447, guid: f287c8f698897064283cc9d1fa5ef338, type: 3}

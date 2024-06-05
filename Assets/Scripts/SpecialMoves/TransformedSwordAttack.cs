@@ -5,19 +5,23 @@ using UnityEngine;
 public class TransformedSwordAttack : MonoBehaviour
 {
 
-    public int damageAmount = 15;
+    public int damageAmount = 20;
     public string firstPlayerTag = "Player1";
     public string otherPlayerTag = "Player2";
     public bool direction = true;
     public Vector2 dir;
+    public string currentTag;
 
     // Start is called before the first frame update
     void Start()
     {
+        print(direction);
          if(direction){
             dir = Vector2.right;
         }else{
             dir = Vector2.left;
+            Vector3 originalScale = transform.localScale;
+            transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
         }
         Destroy(gameObject, 1f);
     }
@@ -25,7 +29,7 @@ public class TransformedSwordAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(dir * 2000f * Time.deltaTime);
+        transform.Translate(dir * 3000f * Time.deltaTime);
     }
 
     // Alternatively, you can use OnTriggerEnter if you want to use triggers instead of collisions
@@ -34,11 +38,10 @@ public class TransformedSwordAttack : MonoBehaviour
         print("Collision");
         // Check if the object entering the trigger has the PlayerHealth component
         PlayerController playerHealth = collision.gameObject.GetComponent<PlayerController>();
-        if (collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag))
+        if ((collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag)) && collision.gameObject.tag != currentTag)
         {
             // Call the TakeDamage method on the player
             playerHealth.TakeDamage(damageAmount);
-            print("damaged");
         }
     }
 }

@@ -5,11 +5,12 @@ using UnityEngine;
 public class MagicAttack : MonoBehaviour
 {
 
-    public int damageAmount = 20;
+    public int damageAmount = 10;
     public string firstPlayerTag = "Player1";
     public string otherPlayerTag = "Player2";
     public bool direction = true;
     public Vector2 dir;
+    public string currentTag;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class MagicAttack : MonoBehaviour
         print("Collision");
         // Check if the object entering the trigger has the PlayerHealth component
         PlayerController playerHealth = collision.gameObject.GetComponent<PlayerController>();
-        if (collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag))
+        if (collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag) && collision.gameObject.tag != currentTag)
         {
             // Call the TakeDamage method on the player
             playerHealth.TakeDamage(damageAmount);
