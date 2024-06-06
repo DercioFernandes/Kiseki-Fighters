@@ -340,6 +340,9 @@ MonoBehaviour:
   healthBarRotation: {x: 0, y: 0, z: 180}
   magicAttack: {fileID: 9214154449930340453, guid: b4a050b8a983adc4aab5caa866b11d2a, type: 3}
   sword: {fileID: 5715042129535093907, guid: 40a3d366249b3f640b993161cc017012, type: 3}
+  playerInputManager: {fileID: 776073748}
+  char1: {fileID: 0}
+  char2: {fileID: 0}
 --- !u!4 &289465619
 Transform:
   m_ObjectHideFlags: 0
@@ -653,7 +656,7 @@ MonoBehaviour:
   m_NotificationBehavior: 0
   m_MaxPlayerCount: -1
   m_AllowJoining: 1
-  m_JoinBehavior: 1
+  m_JoinBehavior: 2
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls: []

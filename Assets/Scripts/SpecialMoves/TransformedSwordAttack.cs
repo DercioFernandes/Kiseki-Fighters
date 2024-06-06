@@ -5,7 +5,7 @@ using UnityEngine;
 public class TransformedSwordAttack : MonoBehaviour
 {
 
-    public int damageAmount = 20;
+    public int damageAmount = 15;
     public string firstPlayerTag = "Player1";
     public string otherPlayerTag = "Player2";
     public bool direction = true;
@@ -15,8 +15,7 @@ public class TransformedSwordAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print(direction);
-         if(direction){
+        if(direction){
             dir = Vector2.right;
         }else{
             dir = Vector2.left;

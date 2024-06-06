@@ -668,7 +668,7 @@ MonoBehaviour:
     m_ActionName: VIAArcade/Guard[/DualSenseGamepadHID/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: WASD
+  m_DefaultActionMap: VIAArcade
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &5174515628309387736
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  maxStamina: 20
+  maxStamina: 50
   currentHealth: 0
   currentStam: 0
   healthBar: {fileID: 0}
@@ -692,6 +692,8 @@ MonoBehaviour:
   isTransformable: 0
   isTransformed: 0
   isDefending: 0
+  gameOverScript: {fileID: 0}
+  gameOver: {fileID: 0}
 --- !u!114 &8722711753140194700
 MonoBehaviour:
   m_ObjectHideFlags: 0

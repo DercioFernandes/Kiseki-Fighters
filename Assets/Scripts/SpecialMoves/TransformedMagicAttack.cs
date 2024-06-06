@@ -5,7 +5,7 @@ using UnityEngine;
 public class TransformedMagicAttack : MonoBehaviour
 {
 
-    public int damageAmount = 40;
+    public int damageAmount = 25;
     public string firstPlayerTag = "Player1";
     public string otherPlayerTag = "Player2";
     public bool direction = true;

@@ -19,6 +19,3 @@ MonoBehaviour:
   - characterName: Frieren
     characterSprite: {fileID: 6883775626913002, guid: a451265ac4cea334c82f0edb8d9f61ab, type: 3}
     characterPrefab: {fileID: 3502158981597555447, guid: 30e2c444d5465df4b911570d4a9166b1, type: 3}
-  - characterName: Oka
-    characterSprite: {fileID: -9213263429266876001, guid: 723ccbf3d892acf45959b945ef712302, type: 3}
-    characterPrefab: {fileID: 3502158981597555447, guid: f287c8f698897064283cc9d1fa5ef338, type: 3}

@@ -86,10 +86,7 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         isRunning = false;
-        //print("Jump pressed");
         if(staminaBar.GetStam() > 0){
-            //print("is jumping)");
-            //print(isGrounder());
             if(context.performed && isGrounder())
             {
                 audioManager.clip = jumpAudio;
@@ -100,7 +97,6 @@ public class PlayerMovement : MonoBehaviour
             if(context.canceled && rb.velocity.y > 0f){
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             }
-            staminaBar.LoseStam(1);
         }
     }
 

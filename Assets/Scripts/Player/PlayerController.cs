@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
             int secondsToWait = 1;
             // Your repeated action goes here
             float stamina = staminaBar.GetStamina();
-            staminaBar.SetStamina((int)stamina + 1);
+            staminaBar.SetStamina((int)stamina + 4);
             if(isDefending==true){
                 secondsToWait=4;
             }

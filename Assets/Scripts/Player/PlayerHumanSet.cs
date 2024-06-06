@@ -135,13 +135,13 @@ public class PlayerHumanSet : MonoBehaviour
     {
         if (context.started && isPunching == false && playerController.GetStam()  >= 4)
         {
-            playerController.LoseStam(8);
+            playerController.LoseStam(3);
             isKicking = true;
             audioManager.clip = kickAudio;
             audioManager.Play();
             if(isTouchingPlayer == true)
                 {
-                    enemyHealthBar.TakeDamage((int)(15f * transformDamage));
+                    enemyHealthBar.TakeDamage((int) (7f * transformDamage));
                 }
             punchCooldownTimer = punchCooldown;
         }

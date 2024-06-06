@@ -142,11 +142,11 @@ public class PlayerElfSet : MonoBehaviour
             //print("kicking");
             audioManager.clip = kickAudio;
             audioManager.Play();
-            playerController.LoseStam(4);
+            playerController.LoseStam(2);
             isKicking = true;
             if(isTouchingPlayer == true)
                 {
-                    enemyHealthBar.TakeDamage((int)(10f * transformDamage));
+                    enemyHealthBar.TakeDamage((int)(5f * transformDamage));
                 }
             punchCooldownTimer = punchCooldown;
         }
