@@ -60,14 +60,12 @@ public class CharacterSpawner : MonoBehaviour
             return;
         }
 
-        // Ensure PlayerInputManager has the player prefab set
         playerInputManager.playerPrefab = char1;
         GameObject spawnedChar1 = JoinPlayer(0, Gamepad.all[1], false);
 
-        playerInputManager.playerPrefab = char2; // Switch to second character prefab
+        playerInputManager.playerPrefab = char2; 
         GameObject spawnedChar2 = JoinPlayer(1, Gamepad.all[0], true);
 
-        // Assign controllers and components
         AssignControllers(spawnedChar1, spawnedChar2);
     }
 
@@ -93,11 +91,9 @@ public class CharacterSpawner : MonoBehaviour
             return null;
         }
 
-        // Set the custom position and rotation
         playerInput.transform.position = spawnPosition;
         playerInput.transform.rotation = spawnRotation;
 
-        // Customize the spawned character
         SetupCharacter(playerInput.gameObject, playerIndex, isSecond);
         return playerInput.gameObject;
     }
@@ -121,7 +117,6 @@ public class CharacterSpawner : MonoBehaviour
             playerController.tag = "Player1";
         }
 
-        // Setup UI bars
         SpawnUIBar(character, isSecond ? uiCanvas2 : uiCanvas1, isSecond);
     }
 

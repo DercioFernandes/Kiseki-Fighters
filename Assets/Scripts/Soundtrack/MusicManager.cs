@@ -9,7 +9,6 @@ public class MusicManager : MonoBehaviour
     public float volume;
     [SerializeField] private float trackTimer;
 
-    // Start is called before the first frame update
     void Start()
     {
         _audiosource = GetComponent<AudioSource>();
@@ -17,7 +16,6 @@ public class MusicManager : MonoBehaviour
             ChangeSong(Random.Range(0, songs.Length));
     }
 
-    // Update is called once per frame
     void Update()
     {
         _audiosource.volume = volume;

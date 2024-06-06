@@ -12,7 +12,6 @@ public class TransformedMagicAttack : MonoBehaviour
     public Vector2 dir;
     public string currentTag;
 
-    // Start is called before the first frame update
     void Start()
     {
         if(direction){
@@ -25,22 +24,17 @@ public class TransformedMagicAttack : MonoBehaviour
         Destroy(gameObject, 2f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         print(dir);
         transform.Translate(dir * 1900f * Time.deltaTime);
     }
 
-    // Alternatively, you can use OnTriggerEnter if you want to use triggers instead of collisions
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Collision");
-        // Check if the object entering the trigger has the PlayerHealth component
         PlayerController playerHealth = collision.gameObject.GetComponent<PlayerController>();
         if ((collision.gameObject.CompareTag(otherPlayerTag) || collision.gameObject.CompareTag(firstPlayerTag)) && collision.gameObject.tag != currentTag)
         {
-            // Call the TakeDamage method on the player
             playerHealth.TakeDamage(damageAmount);
         }
     }

@@ -17,13 +17,11 @@ public class PlayerController : MonoBehaviour
     public bool isTransformed;
     public bool isDefending;
     private Animator animator;
-    //public GameObject gameOverCanvas;
     public GameOver gameOverScript;
     public GameObject gameOver;
 
 
 
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(RunContinuously(3));
@@ -37,11 +35,8 @@ public class PlayerController : MonoBehaviour
         print(GameObject.FindWithTag("GameOverCanvas"));
         gameOver = GameObject.FindWithTag("GameOverCanvas");
         gameOverScript = gameOver.GetComponent<GameOver>();
-        //gameOver.SetActive(false);
-        //gameOver = gameOverCanvas.GetComponent<GameOver>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         currentStam = (int) staminaBar.GetStamina();
@@ -49,18 +44,14 @@ public class PlayerController : MonoBehaviour
         if(currentHealth <= maxHealth * 0.3f)
             isTransformable = true;
         if(currentHealth <= 0){
-            //gameOver.EndGame();
             gameOver.SetActive(true);
             gameOverScript.EndGame(gameObject.name);
-            //gameOverScript.ReturnToMainMenu();
-            //SceneManager.LoadScene("MainMenu");
         }
     }
 
     public void TakeDamage(int damage)
     {
         if(isDefending == true){
-            //Decrease bar by damage.
             float staminaDamage = (float) damage * 0.5f;
             if(staminaBar.GetStamina() > staminaDamage){
                 staminaBar.SetStamina((int) staminaDamage);
@@ -98,21 +89,17 @@ public class PlayerController : MonoBehaviour
             }
 
             if(context.canceled){
-                //animation
             }
         }
     }
 
     IEnumerator RunContinuously(float startTime)
     {
-        // Wait for the initial start time
         yield return new WaitForSeconds(startTime);
 
-        // Loop indefinitely
         while (true)
         {
             int secondsToWait = 1;
-            // Your repeated action goes here
             float stamina = staminaBar.GetStamina();
             staminaBar.SetStamina((int)stamina + 4);
             if(isDefending==true){
@@ -125,7 +112,6 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            // Yield control back to Unity and wait for the next frame before continuing the loop
             yield return new WaitForSeconds(secondsToWait);
         }
     }

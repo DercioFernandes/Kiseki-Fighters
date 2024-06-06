@@ -58,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isJumping", isJumping);
         if (initialRotationY == 180f)
         {
-            // Adjust flip logic for initial rotation of 180 degrees
             if (isFacingRight && horizontal > 0f)
             {
                 Flip();
@@ -70,7 +69,6 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            // Original flip logic for normal orientation
             if (!isFacingRight && horizontal > 0f)
             {
                 Flip();
@@ -108,8 +106,6 @@ public class PlayerMovement : MonoBehaviour
                 audioManager.clip = dashAudio;
                 audioManager.Play();
                 Vector3 targetPosition = transform.position;
-                //print("DASHED");
-                // Check the player's facing direction
                 if (transform.localScale.x > 0)
                 {
                     float xLimit = transform.position.x - dashDistance;
@@ -125,7 +121,6 @@ public class PlayerMovement : MonoBehaviour
                 else
                 {
                     float lLimit = transform.position.x + dashDistance;
-                    // Player is facing left
                     if(lLimit > 1800)
                     {
                         print("is on verge");
@@ -133,7 +128,6 @@ public class PlayerMovement : MonoBehaviour
                         targetPosition = transform.position - transform.right * dashDistance;
                     }
                 }
-                //print(targetPosition);
                 transform.position = targetPosition;
                 staminaBar.LoseStam(1);
             }

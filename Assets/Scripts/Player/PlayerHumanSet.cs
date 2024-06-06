@@ -52,7 +52,6 @@ public class PlayerHumanSet : MonoBehaviour
         if (hit.collider != null)
         {
             lastCollidedTag = hit.collider.gameObject.tag;
-            //Debug.Log("Last collided object tag: " + lastCollidedTag);
             if (lastCollidedTag == "Left") {
                 isSecondPlayer = true;
             }else{

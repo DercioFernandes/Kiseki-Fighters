@@ -32,8 +32,6 @@ public class PlayerElfSet : MonoBehaviour
     public AudioClip guardAudio;
     
     public AudioSource audioManager;
-    //private string currentTag;
-    //private GameObject currentPlayer;
 
     private void Awake()
     {
@@ -43,9 +41,6 @@ public class PlayerElfSet : MonoBehaviour
 
     private void Start()
     {
-        //string currentTag = gameObject.tag;
-        //currentPlayer = gameObject.FindWithTag(currentTag);
-        //= currentPlayer.GetComponent<PlayerController>
         isPunching = false;
         isKicking = false;
         isTouchingPlayer = false;
@@ -60,7 +55,6 @@ public class PlayerElfSet : MonoBehaviour
         if (hit.collider != null)
         {
             lastCollidedTag = hit.collider.gameObject.tag;
-            //Debug.Log("Last collided object tag: " + lastCollidedTag);
             if (lastCollidedTag == "Left") {
                 isSecondPlayer = true;
             }else{
@@ -72,7 +66,6 @@ public class PlayerElfSet : MonoBehaviour
 
     void Update()
     {
-        //print(isFacingRight);
         animator.SetBool("isPunching", isPunching);
         animator.SetBool("isKicking", isKicking);
         if (punchCooldownTimer > 0)
@@ -139,7 +132,6 @@ public class PlayerElfSet : MonoBehaviour
     {
         if (context.started && isPunching == false && playerController.GetStam()  >= 4)
         {
-            //print("kicking");
             audioManager.clip = kickAudio;
             audioManager.Play();
             playerController.LoseStam(2);

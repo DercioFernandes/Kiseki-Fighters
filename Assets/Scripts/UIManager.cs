@@ -20,6 +20,4 @@ public class UIManager : MonoBehaviour
             Instance = this;
         }
     }
-
-    // Any additional methods to update the UI can be added here
 }
