@@ -24,6 +24,13 @@ public class PlayerHumanSet : MonoBehaviour
     public float transformDamage = 1f;
     public bool isBoosted = false;
     private string currentTag;
+
+
+    public AudioClip swordSwingAudio;
+     public AudioClip swordSlashAudio;
+    public AudioClip kickAudio;
+    
+    public AudioSource audioManager;
     
 
     private void Awake()
@@ -37,6 +44,7 @@ public class PlayerHumanSet : MonoBehaviour
         isPunching = false;
         isKicking = false;
         isTouchingPlayer = false;
+        audioManager = GetComponent<AudioSource>();
         
         Vector2 direction = transform.right * Mathf.Sign(transform.localScale.x);
         RaycastHit2D hit = Physics2D.Raycast(transform.position + Vector3.up * 100f, direction*5000f);
@@ -97,6 +105,8 @@ public class PlayerHumanSet : MonoBehaviour
             print(yVal);
             Vector3 spawnPosition = currentPosition + new Vector3(yVal, 100f, 0);
             if(playerController.isTransformed == true){
+                audioManager.clip = swordSlashAudio;
+                audioManager.Play();
                 playerController.LoseStam(2);
                 punchCooldown = 5f;
                 transformSword.direction = isFacingRight;
@@ -105,6 +115,8 @@ public class PlayerHumanSet : MonoBehaviour
                 spawnPosition = currentPosition + new Vector3(yVal, 1f, 0);
                 Instantiate(transformSword, spawnPosition, Quaternion.identity);
             }else{
+                audioManager.clip = swordSwingAudio;
+                audioManager.Play();
                 SwordAttack sa = sword.GetComponent<SwordAttack>();
                 sa.currentTag = currentTag;
                 sa.player = gameObject;
@@ -125,6 +137,8 @@ public class PlayerHumanSet : MonoBehaviour
         {
             playerController.LoseStam(8);
             isKicking = true;
+            audioManager.clip = kickAudio;
+            audioManager.Play();
             if(isTouchingPlayer == true)
                 {
                     enemyHealthBar.TakeDamage((int)(15f * transformDamage));

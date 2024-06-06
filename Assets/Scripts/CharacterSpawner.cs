@@ -44,15 +44,19 @@ public class CharacterSpawner : MonoBehaviour
         Load();
         GameObject char1 = UpdateCharacter(selectedOption);
         PlayerInput playerInput1 = char1.GetComponent<PlayerInput>();
-        playerInput1.defaultActionMap = "WASD";
+        //playerInput1.defaultActionMap = "WASD";
+        playerInput1.defaultActionMap = "VIAArcade";
         print(playerInput1.defaultActionMap);
         GameObject spawnedChar1 = SpawnPrefab(char1, spawnPosition, spawnRotation, uiCanvas1, false);
         
         Vector3 secondSpawnPosition = new Vector3(spawnPosition.x + 1300f, spawnPosition.y, spawnPosition.z);
         GameObject char2 = UpdateCharacter(secondSelectedOption);
         PlayerInput playerInput2 = char2.GetComponent<PlayerInput>();
-        playerInput2.defaultActionMap = "ARROW";
+        //playerInput2.defaultActionMap = "ARROW";
+        playerInput2.defaultActionMap = "VIAArcade";
         GameObject spawnedChar2 = SpawnPrefab(char2, secondSpawnPosition, Quaternion.Euler(0f, 180f, 0f), uiCanvas2, true);
+
+        AssignGamepads(playerInput1, playerInput2);
 
         //After both are spawned
 
@@ -147,6 +151,24 @@ public class CharacterSpawner : MonoBehaviour
 
         playerController.healthBar.SetMaxHealth(maxHealth);
         playerController.staminaBar.SetMaxStamina(maxStam);
+    }
+
+    private void AssignGamepads(PlayerInput playerInput1, PlayerInput playerInput2)
+    {
+        var gamepads = Gamepad.all;
+        print("Gamepads");
+        print(gamepads[0]);
+
+        if (gamepads.Count >= 1)
+        {
+            playerInput1.SwitchCurrentControlScheme(gamepads[0]);
+            //playerInput2.SwitchCurrentControlScheme(gamepads[1]);
+            Debug.Log("Assigned Gamepad 1 to Player 1 and Gamepad 2 to Player 2.");
+        }
+        else
+        {
+            Debug.LogError("Not enough gamepads connected!");
+        }
     }
 
     private GameObject UpdateCharacter(int selectedOption)

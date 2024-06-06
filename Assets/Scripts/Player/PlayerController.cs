@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     public bool isDefending;
     private Animator animator;
     //public GameObject gameOverCanvas;
-    //private GameOver gameOver;
+    public GameOver gameOverScript;
+    public GameObject gameOver;
 
 
 
@@ -32,6 +33,11 @@ public class PlayerController : MonoBehaviour
         isTransformed = false;
         isDefending = false;
         animator = GetComponent<Animator>();
+        
+        print(GameObject.FindWithTag("GameOverCanvas"));
+        gameOver = GameObject.FindWithTag("GameOverCanvas");
+        gameOverScript = gameOver.GetComponent<GameOver>();
+        //gameOver.SetActive(false);
         //gameOver = gameOverCanvas.GetComponent<GameOver>();
     }
 
@@ -44,7 +50,10 @@ public class PlayerController : MonoBehaviour
             isTransformable = true;
         if(currentHealth <= 0){
             //gameOver.EndGame();
-            SceneManager.LoadScene("MainMenu");
+            gameOver.SetActive(true);
+            gameOverScript.EndGame(gameObject.name);
+            //gameOverScript.ReturnToMainMenu();
+            //SceneManager.LoadScene("MainMenu");
         }
     }
 
@@ -110,7 +119,7 @@ public class PlayerController : MonoBehaviour
                 secondsToWait=4;
             }
             if(isTransformed == true){
-                currentHealth += 5;
+                currentHealth += 1;
                 if(currentHealth > maxHealth){
                     currentHealth = maxHealth;
                 }

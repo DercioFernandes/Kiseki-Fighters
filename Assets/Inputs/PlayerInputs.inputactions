@@ -466,31 +466,9 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "40113d70-bcaf-4e41-a614-97b628d9794a",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "30889d50-73a1-471a-b35a-5a3c8948d091",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "left",
                     "id": "d56bb9c2-19de-4039-9110-ef9230f8abbb",
-                    "path": "<Joystick>/stick/left",
+                    "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -501,7 +479,7 @@
                 {
                     "name": "right",
                     "id": "1ac7aac9-3021-47bc-b8ad-e7d054314572",
-                    "path": "<Joystick>/stick/right",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -512,7 +490,7 @@
                 {
                     "name": "",
                     "id": "e66a877b-d9f4-4e86-a338-9e482776c69c",
-                    "path": "<Joystick>/stick/up",
+                    "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -523,7 +501,7 @@
                 {
                     "name": "",
                     "id": "7dc4ea86-c6ff-4fdb-8f41-f7507eae8247",
-                    "path": "<Joystick>/stick/down",
+                    "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

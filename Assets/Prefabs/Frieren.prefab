@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013495117, y: -0.0031223893}
+  m_Offset: {x: -0.0005979985, y: 0.02590096}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18971503, y: 0.50811446}
+  m_Size: {x: 0.16142604, y: 0.5760963}
   m_EdgeRadius: 0
 --- !u!1 &3502158981597555447
 GameObject:
@@ -94,9 +94,10 @@ GameObject:
   - component: {fileID: 6300284565339651383}
   - component: {fileID: 5174515628309387736}
   - component: {fileID: 8722711753140194700}
-  - component: {fileID: 8531216555786859314}
+  - component: {fileID: 3840813025567232143}
+  - component: {fileID: 5645257781555036922}
   m_Layer: 2
-  m_Name: Human
+  m_Name: Frieren
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,8 +112,8 @@ Transform:
   m_GameObject: {fileID: 3502158981597555447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 236, y: 117, z: 0.1039}
-  m_LocalScale: {x: 660.3052, y: 696.4118, z: 1}
+  m_LocalPosition: {x: 264.3345, y: 75.7791, z: 0.1039}
+  m_LocalScale: {x: 660.30524, y: 696.4118, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3327944751695721466}
@@ -160,7 +161,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3301062544420755182, guid: 8041005b4fe372d4087c3d890ad12be8, type: 3}
+  m_Sprite: {fileID: 6883775626913002, guid: a451265ac4cea334c82f0edb8d9f61ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -181,7 +182,7 @@ Animator:
   m_GameObject: {fileID: 3502158981597555447}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 01b95251bb5affb4f9b687de915e1f0b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1a285007c90831f448cf39f5464907dd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -251,18 +252,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02984196, y: 0.3491354}
+  m_Offset: {x: -0.029283408, y: 0.36588094}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.61538464, y: -0.54545456}
-    oldSize: {x: 0.26, y: 0.33}
+    pivot: {x: 0.61538464, y: -0.4864865}
+    oldSize: {x: 0.26, y: 0.37}
     newSize: {x: 0.18, y: 0.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27048844, y: 0.3408618}
+  m_Size: {x: 0.25966498, y: 0.37529463}
   m_EdgeRadius: 0
 --- !u!114 &5076015195564272630
 MonoBehaviour:
@@ -283,10 +284,14 @@ MonoBehaviour:
   staminaBar: {fileID: 0}
   isRunning: 0
   isJumping: 0
-  moveSpeed: 900
+  moveSpeed: 800
   jumpForce: 800
   dashSpeed: 200
   dashDistance: 200
+  runAudio: {fileID: 8300000, guid: 1989732f44e630b4283a37e45eb223a4, type: 3}
+  jumpAudio: {fileID: 8300000, guid: f0074ea18546cb1468ae2992245c2e31, type: 3}
+  dashAudio: {fileID: 8300000, guid: 2026c41414e4f3e4aae72b6ba093e197, type: 3}
+  audioManager: {fileID: 5645257781555036922}
   playerController: {fileID: 0}
 --- !u!114 &6300284565339651383
 MonoBehaviour:
@@ -305,19 +310,7 @@ MonoBehaviour:
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_DeviceRegainedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -423,8 +416,8 @@ MonoBehaviour:
     m_ActionName: ARROW/Dash[/Keyboard/downArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8722711753140194700}
-        m_TargetAssemblyTypeName: PlayerHumanSet, Assembly-CSharp
+      - m_Target: {fileID: 3840813025567232143}
+        m_TargetAssemblyTypeName: PlayerElfSet, Assembly-CSharp
         m_MethodName: Punch
         m_Mode: 0
         m_Arguments:
@@ -439,8 +432,8 @@ MonoBehaviour:
     m_ActionName: WASD/Punch[/Keyboard/g]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8722711753140194700}
-        m_TargetAssemblyTypeName: PlayerHumanSet, Assembly-CSharp
+      - m_Target: {fileID: 3840813025567232143}
+        m_TargetAssemblyTypeName: PlayerElfSet, Assembly-CSharp
         m_MethodName: Punch
         m_Mode: 0
         m_Arguments:
@@ -455,8 +448,8 @@ MonoBehaviour:
     m_ActionName: ARROW/Punch[/Keyboard/m]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8722711753140194700}
-        m_TargetAssemblyTypeName: PlayerHumanSet, Assembly-CSharp
+      - m_Target: {fileID: 3840813025567232143}
+        m_TargetAssemblyTypeName: PlayerElfSet, Assembly-CSharp
         m_MethodName: Kick
         m_Mode: 0
         m_Arguments:
@@ -471,8 +464,8 @@ MonoBehaviour:
     m_ActionName: WASD/Kick[/Keyboard/h]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8722711753140194700}
-        m_TargetAssemblyTypeName: PlayerHumanSet, Assembly-CSharp
+      - m_Target: {fileID: 3840813025567232143}
+        m_TargetAssemblyTypeName: PlayerElfSet, Assembly-CSharp
         m_MethodName: Kick
         m_Mode: 0
         m_Arguments:
@@ -519,8 +512,8 @@ MonoBehaviour:
     m_ActionName: ARROW/Transform[/Keyboard/b]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8722711753140194700}
-        m_TargetAssemblyTypeName: PlayerHumanSet, Assembly-CSharp
+      - m_Target: {fileID: 3840813025567232143}
+        m_TargetAssemblyTypeName: PlayerElfSet, Assembly-CSharp
         m_MethodName: Guard
         m_Mode: 0
         m_Arguments:
@@ -535,8 +528,8 @@ MonoBehaviour:
     m_ActionName: WASD/Guard[/Keyboard/q]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8722711753140194700}
-        m_TargetAssemblyTypeName: PlayerHumanSet, Assembly-CSharp
+      - m_Target: {fileID: 3840813025567232143}
+        m_TargetAssemblyTypeName: PlayerElfSet, Assembly-CSharp
         m_MethodName: Guard
         m_Mode: 0
         m_Arguments:
@@ -549,9 +542,122 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2d274241-2026-48be-834c-f1caf750b1d2
     m_ActionName: ARROW/Guard[/Keyboard/v]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5076015195564272630}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6ce9a840-d15a-4fbc-ae44-6980a7fc0580
+    m_ActionName: VIAArcade/Movement[/Shaul Eizikovich vJoy - Virtual Joystick/stick/left,/Shaul
+      Eizikovich vJoy - Virtual Joystick/stick/right]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5076015195564272630}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5db75061-9a60-41ae-a4b7-4c861f65755a
+    m_ActionName: VIAArcade/Jump[/Shaul Eizikovich vJoy - Virtual Joystick/stick/up]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5076015195564272630}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: Dash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3fa6e101-50ba-4068-a596-3263ae8c1c28
+    m_ActionName: VIAArcade/Dash[/Shaul Eizikovich vJoy - Virtual Joystick/stick/down]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3840813025567232143}
+        m_TargetAssemblyTypeName: PlayerElfSet, Assembly-CSharp
+        m_MethodName: Punch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6d5f7ef1-1d58-4f41-a6ef-7e309afe879c
+    m_ActionName: VIAArcade/Punch[/DualSenseGamepadHID/buttonWest]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3840813025567232143}
+        m_TargetAssemblyTypeName: PlayerElfSet, Assembly-CSharp
+        m_MethodName: Kick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b33c8e3c-e4fd-4be9-a8f0-4284eede16d0
+    m_ActionName: VIAArcade/Kick[/DualSenseGamepadHID/buttonEast]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5174515628309387736}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Transform
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 25047b85-9dd0-4e0b-a4d6-90d31e464f41
+    m_ActionName: VIAArcade/Transform[/DualSenseGamepadHID/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3840813025567232143}
+        m_TargetAssemblyTypeName: PlayerElfSet, Assembly-CSharp
+        m_MethodName: Guard
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4bf5e470-b419-4f8c-a733-7d5341b9bc7a
+    m_ActionName: VIAArcade/Guard[/DualSenseGamepadHID/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: WASD
+  m_DefaultActionMap: VIAArcade
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &5174515628309387736
@@ -575,6 +681,7 @@ MonoBehaviour:
   isTransformable: 0
   isTransformed: 0
   isDefending: 0
+  gameOver: {fileID: 0}
 --- !u!114 &8722711753140194700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +689,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3502158981597555447}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8cdfc09713396b046a39b2bad31a1704, type: 3}
   m_Name: 
@@ -595,20 +702,24 @@ MonoBehaviour:
   otherPlayerTag: Player2
   punchCooldown: 1
   isTouchingPlayer: 0
-  sword: {fileID: 5715042129535093907, guid: 40a3d366249b3f640b993161cc017012, type: 3}
-  transformSword: {fileID: -1349359163259480978, guid: 39d91677fa530e240995c93ec7bfc70c, type: 3}
+  sword: {fileID: 0}
+  transformSword: {fileID: 0}
   isFacingRight: 0
   isSecondPlayer: 0
   transformDamage: 1
   isBoosted: 0
---- !u!114 &8531216555786859314
+  swordSwingAudio: {fileID: 0}
+  swordSlashAudio: {fileID: 0}
+  kickAudio: {fileID: 0}
+  audioManager: {fileID: 0}
+--- !u!114 &3840813025567232143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3502158981597555447}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bc333d4e9f40884698d8b12a4b18385, type: 3}
   m_Name: 
@@ -621,12 +732,113 @@ MonoBehaviour:
   otherPlayerTag: Player2
   punchCooldown: 1
   isTouchingPlayer: 0
-  magicAttack: {fileID: 0}
-  transformedMagicAttack: {fileID: 0}
+  magicAttack: {fileID: 9214154449930340453, guid: b4a050b8a983adc4aab5caa866b11d2a, type: 3}
+  transformedMagicAttack: {fileID: 9214154449930340453, guid: f6e0da6a460e78342ab8f5d9841e0ade, type: 3}
   mA: {fileID: 0}
   isSecondPlayer: 0
   transformDamage: 1
   isBoosted: 0
+  zoltraakAudio: {fileID: 8300000, guid: 42a373fa8515c0047826b606174ae7bd, type: 3}
+  heighOfMagicAudio: {fileID: 8300000, guid: b1034eeacfda87247a23fd8734b07b63, type: 3}
+  kickAudio: {fileID: 8300000, guid: 0c594748143f81646957bcb103d967dc, type: 3}
+  guardAudio: {fileID: 8300000, guid: e920277d8d574af4f936a03fbbfd416e, type: 3}
+  audioManager: {fileID: 5645257781555036922}
+--- !u!82 &5645257781555036922
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3502158981597555447}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6911750491631383055
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +864,7 @@ Transform:
   m_GameObject: {fileID: 6911750491631383055}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.066, y: 0.181, z: 0}
+  m_LocalPosition: {x: -0.067, y: 0.1802, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

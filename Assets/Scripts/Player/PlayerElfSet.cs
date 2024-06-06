@@ -25,6 +25,13 @@ public class PlayerElfSet : MonoBehaviour
     public float transformDamage = 1f;
     public bool isBoosted = false;
     private string currentTag;
+
+    public AudioClip zoltraakAudio;
+    public AudioClip heighOfMagicAudio;
+    public AudioClip kickAudio;
+    public AudioClip guardAudio;
+    
+    public AudioSource audioManager;
     //private string currentTag;
     //private GameObject currentPlayer;
 
@@ -42,6 +49,8 @@ public class PlayerElfSet : MonoBehaviour
         isPunching = false;
         isKicking = false;
         isTouchingPlayer = false;
+
+        audioManager = GetComponent<AudioSource>();
         
         mA = magicAttack.GetComponent<MagicAttack>();
         
@@ -104,6 +113,8 @@ public class PlayerElfSet : MonoBehaviour
             Vector3 spawnPosition = currentPosition + new Vector3(yVal, 200f, 0);
             mA.direction = isFacingRight;
             if(playerController.isTransformed == true){
+                audioManager.clip = heighOfMagicAudio;
+                audioManager.Play();
                 playerController.LoseStam(3);
                 punchCooldown = 10f;
                 TransformedMagicAttack taM = transformedMagicAttack.GetComponent<TransformedMagicAttack>();
@@ -111,6 +122,8 @@ public class PlayerElfSet : MonoBehaviour
                 spawnPosition = currentPosition + new Vector3(yVal, 1f, 0);
                 Instantiate(transformedMagicAttack, spawnPosition, Quaternion.identity);
             }else{
+                audioManager.clip = zoltraakAudio;
+                audioManager.Play();
                 mA.currentTag = currentTag;
                 Instantiate(magicAttack, spawnPosition, Quaternion.identity);
             }
@@ -127,6 +140,8 @@ public class PlayerElfSet : MonoBehaviour
         if (context.started && isPunching == false && playerController.GetStam()  >= 4)
         {
             //print("kicking");
+            audioManager.clip = kickAudio;
+            audioManager.Play();
             playerController.LoseStam(4);
             isKicking = true;
             if(isTouchingPlayer == true)
@@ -146,6 +161,8 @@ public class PlayerElfSet : MonoBehaviour
         if(playerController.GetStam() > 0){
             if(context.performed )
             {
+                audioManager.clip = guardAudio;
+                audioManager.Play();
                 animator.SetBool("isGuarding", true);
                 playerController.isDefending = true;
             }

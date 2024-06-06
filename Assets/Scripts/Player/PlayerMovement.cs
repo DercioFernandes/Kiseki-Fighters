@@ -23,6 +23,12 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 500f;
     public float dashSpeed = 200f;
     public float dashDistance = 300f;
+
+    public AudioClip runAudio;
+    public AudioClip jumpAudio;
+    public AudioClip dashAudio;
+    
+    public AudioSource audioManager;
     
     private float initialRotationY;
     public PlayerController playerController;
@@ -39,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
         initialRotationY = transform.rotation.eulerAngles.y;
         staminaBar = playerController;
+        
+        audioManager = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -84,6 +92,8 @@ public class PlayerMovement : MonoBehaviour
             //print(isGrounder());
             if(context.performed && isGrounder())
             {
+                audioManager.clip = jumpAudio;
+                audioManager.Play();
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
 
@@ -99,6 +109,8 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed)
         {
             if(staminaBar.GetStam() > 0){
+                audioManager.clip = dashAudio;
+                audioManager.Play();
                 Vector3 targetPosition = transform.position;
                 //print("DASHED");
                 // Check the player's facing direction
@@ -145,6 +157,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
+        audioManager.clip = runAudio;
+        audioManager.Play();
         horizontal = context.ReadValue<Vector2>().x;
     }
 }
